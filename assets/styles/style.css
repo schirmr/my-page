@@ -1,0 +1,55 @@
+/*Definição geral*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Definições para o body*/
+body {
+    font-family: 'Arial', 'Calibri', 'Helvetica', 'Tahoma';
+}
+nav{
+    margin-top: 20px;
+    width: 100vw;    
+    text-align: center;
+}
+
+progress{
+    text-align: center;
+    width: 50vw;
+}
+
+.container {
+    margin-top: 10px;
+    margin-bottom: 2rem;
+}
+aside{
+    width: 80px;
+    position: fixed;
+    background-color: lightgoldenrodyellow;
+    left: 0;
+    top: 0;
+    height: 100vh;
+}
+aside div{
+    text-align: center;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+}
+
+article {
+    margin-left: 100px;
+}
+
+/*Títulos*/
+h2 {
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+/*Textos*/
+p, li{
+    text-align: justify;
+    margin: 2rem;
+    font-size: 1rem;
+}
