@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <progress value="10" max="100"></progress>
+    </nav>
+    <main class="container">
+        <aside>
+            <div> Menu: </div>
+            <div id="zoom+"> + </div>
+            <div id="zoom-"> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
+            <div><a href="" id="prox">&gt;</a></div>
+        </aside>
+        <article>
+            <h2>5. Criando a primeira tabela</h2>
+            <p>Uma tabela em um "Banco de Dados" é composta por colunas e linhas. Em termos de "Banco de Dados",
+                chamamos as colunas de ATRIBUTOS, enquanto as linhas podem ser chamadas de REGISTROS ou TUPLAS, sendo o
+                segundo nome o mais comum.
+            </p>
+            <p>Na etapa anterior, durante a diagramação, utilizamos o modelo relacional para representar a estrutura das
+                tabelas, como exemplificado na imagem abaixo:
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col" colspan="2">Cliente</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>PK</b></td>
+                        <td>cliente_id INT(4) NOT NULL</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>cliente_nome VARCHAR(100) NOT NULL</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Nesse exemplo, temos os atributos "cliente_id" e "cliente_nome". As linhas são exemplos de tuplas,
+                representando registros específicos da tabela. Cada linha (tupla/registro) é um cliente diferente
+                cadastrado.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">cliente_id</th>
+                        <th scope="col">cliente_nome</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1001</td>
+                        <td>Uianes</td>
+                    </tr>
+                    <tr>
+                        <td>1002</td>
+                        <td>Maria</td>
+                    </tr>
+                    <tr>
+                        <td>1003</td>
+                        <td>José</td>
+                    </tr>
+                    <tr>
+                        <td>1004</td>
+                        <td>Antônio</td>
+                    </tr>
+                    <tr>
+                        <td>1005</td>
+                        <td>João</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>
+                Para criar a estrutura da tabela do exemplo apresentado, utilizamos as seguintes instruções na linguagem
+                SQL:
+            </p>
+            <code><span>CREATE TABLE</span> Cliente(</code> <br>
+            <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span>,</code> <br>
+            <code style="padding-left: 20px;">cliente_nome <span>VARCHAR(50) NOT NULL</span>,</code> <br>
+            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id) </code><br>
+            <code>);</code>
+        </article>
+    </main>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+</body>
+
+</html>

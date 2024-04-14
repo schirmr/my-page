@@ -3,7 +3,7 @@ var zoomMenosDiv = document.getElementById("zoom-");
 
 zoomMenosDiv.addEventListener("click", function () {
 
-    var elementos = document.querySelectorAll("p, code, li, h2");
+    var elementos = document.querySelectorAll("p, code, li, h2, table");
 
 
     elementos.forEach(function (elemento) {

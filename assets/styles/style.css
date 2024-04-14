@@ -48,10 +48,19 @@ h2 {
 }
 
 /*Textos*/
-p, li, code{
+p, li, code, table{
     text-align: justify;
     margin: 2rem;
     font-size: 18px;
+}
+table{
+    border-collapse: collapse;
+    border: 2px solid black;
+    letter-spacing: 1px;
+}
+th,td{
+    border: 1px solid black;
+    padding: 8px;
 }
 img{
     text-align: center;
