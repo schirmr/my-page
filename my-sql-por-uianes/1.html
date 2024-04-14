@@ -10,19 +10,18 @@
 </head>
 
 <body>
-    <header></header>
     <nav>
         <progress value="2" max="100"></progress>
     </nav>
     <main class="container">
         <aside>
             <div> Menu: </div>
-            <div> + </div>
-            <div> - </div>
-            <div>&lt;</div>
+            <div id="zoom+"> + </div>
+            <div id="zoom-"> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
             <div><a href="" id="prox">&gt;</a></div>
         </aside>
-        <article>
+        <article class="texto">
             <h2>1. O que é SQL?</h2>
             <p>SQL é a abreviação de Structured Query Language, ou, em Português, Linguagem de Consulta Estruturada. É
                 uma linguagem que permite acessar e manipular uma base de dados. Embora o SQL seja padronizado pela
@@ -82,10 +81,10 @@
                 Em aula, considerando a duração do semestre, geralmente estudamos os subconjuntos DDL, DQL e DML.
             </p>
         </article>
-        <section></section>
     </main>
-    <footer></footer>
     <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
 </body>
 
 </html>

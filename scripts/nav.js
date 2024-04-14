@@ -6,4 +6,8 @@ var numero2 = parseInt(pageNumber) - 1;
 var proximaUrl = url.substring(0, lastIndex + 1) + numero + ".html";
 var anteriorUrl = url.substring(0, lastIndex + 1) + numero2 + ".html";
 document.getElementById("prox").href = proximaUrl;
-document.getElementById("ant").href = anteriorUrl;
+if (numero2 == 0){
+    document.getElementById("ant").href = "index.html";
+} else {
+    document.getElementById("ant").href = anteriorUrl;    
+}

@@ -51,7 +51,7 @@ h2 {
 p, li, code{
     text-align: justify;
     margin: 2rem;
-    font-size: 1rem;
+    font-size: 18px;
 }
 img{
     text-align: center;
@@ -61,4 +61,8 @@ span{
 }
 #alerta{
     color: orangered;
+}
+a {
+    text-decoration: none;
+    color: black;
 }
