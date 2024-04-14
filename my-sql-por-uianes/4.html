@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+    <header></header>
+    <nav>
+        <progress value="2" max="100"></progress>
+    </nav>
+    <main class="container">
+        <aside>
+            <div> Menu: </div>
+            <div> + </div>
+            <div> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
+            <div><a href="" id="prox">&gt;</a></div>
+        </aside>
+        <article>
+            <h2>4. Criando a primeira base de dados</h2>
+            <p>Apesar de utilizarmos, no Brasil, o nome "Banco de Dados", é mais adequado o termo "Base de Dados". Para
+                fins didáticos, vamos considerar o conceito de "Banco de Dados" como um conjunto de várias bases de
+                dados, e a "Base de Dados" como o conjunto de tabelas relacionadas entre si.
+            </p>
+            <p>Portanto, iniciamos a construção do nosso banco de dados pela criação da base de dados.
+            </p>
+            <p>
+                Para criar uma base de dados, utilizamos o comando:
+            </p>
+            <code><span>CREATE DATABASE</span> nomeDaBaseDeDados;</code>
+            <p>
+                Observações: Não podemos utilizar espaços para nomear uma base de dados. Caso seja necessário separar as palavras no nome, utilize o caractere "_", assim: nome_da_base_de_dados. Você pode utilizar acentos e números no nome, mas evite o uso de caracteres especiais.
+            </p>
+            <p>
+                Para visualizar todas as bases de dados criadas, utilizamos o comando: 
+            </p>
+            <code><span>SHOW DATABASES</span>;</code>
+            <p><span id="alerta">Cuidado!</span> Caso você tenha criado uma Base de Dados que precisa ser excluída, você pode utilizar o comando: </p>
+            <code><span>DROP DATABASE </span>nomeDaBaseDeDados;</code>
+            <p>Isso excluirá todas as tabelas e dados contidos naquela base de dados. </p>
+            <p>Para selecionar uma base de dados e poder criar suas tabelas, utilizamos o comando: </p>
+            <code><span>USE</span> nomeDaBaseDeDados;</code>
+        </article>
+        <section></section>
+    </main>
+    <footer></footer>
+    <script src="../scripts/nav.js"></script>
+</body>
+
+</html>

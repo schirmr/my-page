@@ -48,11 +48,17 @@ h2 {
 }
 
 /*Textos*/
-p, li{
+p, li, code{
     text-align: justify;
     margin: 2rem;
     font-size: 1rem;
 }
 img{
     text-align: center;
+}
+span{
+    color: red;
+}
+#alerta{
+    color: orangered;
 }
