@@ -20,9 +20,16 @@
             <div id="zoom-"> - </div>
             <div><a href="" id="ant">&lt;</a></div>
             <div><a href="" id="prox">&gt;</a></div>
+            <hr>
+            <div id="imprimir">Imprimir</div>
+            <div id="pdf">PDF</div>
         </aside>
-        <article>
+        <article id="texto">
             <h2>4. Criando a primeira base de dados</h2>
+            <div id="autor">
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
+                    Última atualização em 04 out. 2023</small>
+            </div>
             <p>Apesar de utilizarmos, no Brasil, o nome "Banco de Dados", é mais adequado o termo "Base de Dados". Para
                 fins didáticos, vamos considerar o conceito de "Banco de Dados" como um conjunto de várias bases de
                 dados, e a "Base de Dados" como o conjunto de tabelas relacionadas entre si.
@@ -47,9 +54,12 @@
             <code><span>USE</span> nomeDaBaseDeDados;</code>
         </article>
     </main>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
     <script src="../scripts/nav.js"></script>
     <script src="../scripts/zoom+.js"></script>
     <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
 </body>
 
 </html>

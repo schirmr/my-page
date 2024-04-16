@@ -8,13 +8,14 @@
 body {
     font-family: 'Arial', 'Calibri', 'Helvetica', 'Tahoma';
 }
-nav{
+
+nav {
     margin-top: 20px;
-    width: 100vw;    
+    width: 100vw;
     text-align: center;
 }
 
-progress{
+progress {
     text-align: center;
     width: 50vw;
 }
@@ -23,15 +24,18 @@ progress{
     margin-top: 10px;
     margin-bottom: 2rem;
 }
-aside{
-    width: 80px;
+
+aside {
+    min-width: 70px;
+    max-width: 80px; /* Defina um valor máximo para evitar que o menu lateral fique muito largo */
     position: fixed;
     background-color: lightgoldenrodyellow;
     left: 0;
     top: 0;
     height: 100vh;
 }
-aside div{
+
+aside div {
     text-align: center;
     margin-bottom: 2vh;
     margin-top: 2vh;
@@ -48,30 +52,54 @@ h2 {
 }
 
 /*Textos*/
-p, li, code, table{
+p,
+li,
+code,
+table {
     text-align: justify;
     margin: 2rem;
     font-size: 18px;
 }
-table{
+
+h2,
+p {
+    page-break-inside: avoid;
+}
+
+table {
     border-collapse: collapse;
     border: 2px solid black;
     letter-spacing: 1px;
 }
-th,td{
+
+th,
+td {
     border: 1px solid black;
     padding: 8px;
 }
-img{
+
+img {
     text-align: center;
 }
-span{
+
+span {
     color: red;
 }
-#alerta{
+
+#alerta {
     color: orangered;
 }
+
 a {
     text-decoration: none;
     color: black;
+}
+
+#autor {
+    border-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    text-align: right;
+    margin-right: 10px;
+    margin-left: auto;
 }

@@ -20,9 +20,16 @@
             <div id="zoom-"> - </div>
             <div><a href="" id="ant">&lt;</a></div>
             <div><a href="" id="prox">&gt;</a></div>
+            <hr>
+            <div id="imprimir">Imprimir</div>
+            <div id="pdf">PDF</div>
         </aside>
-        <article class="texto">
+        <article id="texto">
             <h2>1. O que é SQL?</h2>
+            <div id="autor">
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
+                    Última atualização em 04 out. 2023</small>
+            </div>
             <p>SQL é a abreviação de Structured Query Language, ou, em Português, Linguagem de Consulta Estruturada. É
                 uma linguagem que permite acessar e manipular uma base de dados. Embora o SQL seja padronizado pela
                 ANSI/ISO, existem diferentes versões. Em nosso curso, utilizamos o MySQL. No entanto, programadores ao
@@ -82,9 +89,12 @@
             </p>
         </article>
     </main>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
     <script src="../scripts/nav.js"></script>
     <script src="../scripts/zoom+.js"></script>
     <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <progress value="14" max="100"></progress>
+    </nav>
+    <main class="container">
+        <aside>
+            <div> Menu: </div>
+            <div id="zoom+"> + </div>
+            <div id="zoom-"> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
+            <div><a href="" id="prox">&gt;</a></div>
+            <hr>
+            <div id="imprimir">Imprimir</div>
+            <div id="pdf">PDF</div>
+        </aside>
+        <article id="texto">
+            <h2>7. Chaves Primária e Estrangeira</h2>
+            <div id="autor">
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
+                    Última atualização em 04 out. 2023</small>
+            </div>
+            <p>A chave primária, chamada de <i>Primary Key</i>, é utilizada para identificar cada tupla (registro) da tabela. A
+                chave primária sempre será um valor único e não pode ser nula. Toda tabela deve ter somente uma chave
+                primária.
+            </p>
+            <p>
+                Para adicionar uma chave primária na criação de uma tabela, usamos o seguinte comando:
+            </p>
+            <code><span>PRIMARY KEY</span>(nomeAtributo);</code>
+            <p>Exemplo:
+            </p>
+            <code><span>CREATE TABLE</span> Cliente(</code> <br>
+            <code style="padding-left: 20px;">cliente_id<span>INT(4) NOT NULL</span>,</code> <br>
+            <code style="padding-left: 20px;">cliente_nome<span>VARCHAR(50) NOT NULL</span>,</code> <br>
+            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code><br>
+            <code>);</code>
+            <p>Para adicionar uma chave primária em uma tabela já criada, usamos o seguinte comando:</p>
+            <code><span>ALTER TABLE</span> nomeTabela</code> <br>
+            <code><span>ADD PRIMARY KEY</span>(nomeAtributo);</code>
+            <p>Exemplo:</p>
+            <code><span>ALTER TABLE</span> Cliente</code> <br>
+            <code><span>ADD PRIMARY KEY</span>(cliente_id);</code>
+            <p>Para remover uma chave primária, usamos o seguinte comando:</p>
+            <code><span>ALTER TABLE</span> nomeTabela</code> <br>
+            <code><span>DROP PRIMARY KEY</span></code>
+            <p>Exemplo:</p>
+            <code><span>ALTER TABLE</span> Cliente</code> <br>
+            <code><span>DROP PRIMARY KEY</span></code>
+        </article>
+    </main>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+</body>
+
+</html>
