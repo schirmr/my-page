@@ -21,3 +21,4 @@ Funcionalidades atuais:
 - [ ] Testar botão de alto contraste em vários contextos.
 - [x] Quando a página está em modo dark, é necessário retornar ao modo light para gerar o PDF, caso contrário o PDF estará ilegível. Adicionar script ao pdf.js para corrigir isso.
 - [ ] Adcionar botão para mudar o idioma do texto.
+- [ ] Adicionar botão para modo daltônio, alterando o padrão de cores.
