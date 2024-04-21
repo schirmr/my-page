@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <progress value="2" max="100"></progress>
+    </nav>
+    <main class="container">
+        <aside>
+            <div><a href="index.html"> Início </a></div>
+            <hr>
+            <div> Menu: </div>
+            <div id="zoom+"> + </div>
+            <div id="zoom-"> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
+            <div><a href="" id="prox">&gt;</a></div>
+            <hr>
+            <div id="imprimir">Imprimir</div>
+            <div id="pdf">PDF</div>
+            <div id="darkmode">Alto<br>Contraste</div>
+        </aside>
+        <article id="texto">
+            <h2>1. O que é SQL?</h2>
+            <div id="autor">
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
+                    Última atualização em 04 out. 2023</small>
+            </div>
+            <p>SQL é a abreviação de Structured Query Language, ou, em Português, Linguagem de Consulta Estruturada. É
+                uma linguagem que permite acessar e manipular uma base de dados. Embora o SQL seja padronizado pela
+                ANSI/ISO, existem diferentes versões. Em nosso curso, utilizamos o MySQL. No entanto, programadores ao
+                redor do mundo podem optar por utilizar MariaDB, PostgreSQL, Oracle, entre tantas outras opções.
+            </p>
+            <p>Diferentes linguagens SQL devem permitir quatro instruções básicas: SELECT, INSERT, UPDATE e DELETE.
+                Apesar de falarmos em diferentes linguagens, na realidade dos DBAs (Administradores de Banco de Dados),
+                as diferenças ocorrem somente quando decidem utilizar um SGBD diferente.
+            </p>
+            <p>
+                SGBD é o Sistema Gerenciador de Banco de Dados. Por exemplo, o que chamamos de MySQL é, na realidade, um
+                SGBD que utiliza uma linguagem baseada em SQL.
+            </p>
+            <p>
+                Vantagens de utilizar o MySQL:
+            </p>
+            <ul>
+                <li>Tecnologia open-source;</li>
+                <li>Gratuito;</li>
+                <li>Rápido;</li>
+                <li>Relacional.</li>
+            </ul>
+            <p>O que vamos estudar?</p>
+            <p>As instruções em SQL podem ser classificadas em subconjuntos, sendo eles: </p>
+            <p>DQL, DML, DDL, DCL e DTL (ou TCL). <br>
+                <br>
+                DQL → Data Query Language. <br>
+                DML → Data Manipulation Language. <br>
+                DDL → Data Definition Language. <br>
+                DCL → Data Control Language.<br>
+                DTL → Data Transaction Language.
+            </p>
+            <img src="../assets/images/estruturaSQL.png" width="200px"
+                alt="A imagem ilustra os subconjuntos de instruções SQL: O primeiro ponto é a palavra SQL, partido dessa palavra existem 5 setas, a primeira seta aponta para a palavra DQL, a segunda seta aponta para DML, a terceira seta aponta para DDL, a quarta seta aponta para DCL e a última seta aponta para DTL.">
+            <p>
+                DDL: Linguagem de Definição de Dados. É o conjunto de instruções que permite definir a base de dados.
+                Exemplos: CREATE, DROP, ALTER, TRUNCATE, COMMENT, RENAME.
+            </p>
+            <p>
+                DQL: Linguagem de Consulta de Dados. É o conjunto de instruções que permite consultar os dados
+                armazenados. Exemplo: SELECT.
+            </p>
+            <p>
+                DML: Linguagem de Manipulação de Dados. É o conjunto de instruções que permite manipular os dados
+                armazenados. Exemplos: INSERT, UPDATE, DELETE.
+            </p>
+            <p>
+                DCL: Linguagem de Controle de Dados. É o conjunto de instruções que permite gerenciar a segurança do
+                banco de dados. Exemplos: GRANT, REVOKE.
+            </p>
+            <p>
+                DTL: Linguagem de Transação Dados. É o conjunto de instruções que permite gerenciar a transação de
+                dados. Exemplos: BEGIN/SET TRANSACTION, COMMIT, ROLLBACK, SAVEPOINT.
+            </p>
+            <p>
+                Em aula, considerando a duração do semestre, geralmente estudamos os subconjuntos DDL, DQL e DML.
+            </p>
+        </article>
+    </main>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+</body>
+
+</html>
