@@ -32,3 +32,4 @@ Funcionalidades atuais:
 - [x] Botão de volume - 
 - [ ] Botão de volume + (funcionando parcialmente, pois é necessário aumentar o volume do sistema)
 - [ ] Testar funcionalidades de voz em outros navegadores.
+- [ ] Ajustar responsividade do menu e dos textos.
