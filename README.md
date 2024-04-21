@@ -19,5 +19,5 @@ Funcionalidades atuais:
 - [ ] Adicionar simulador para testar os comandos do capítulo.
 - [x] Adicionar botão para modo de alto contraste (Dark).
 - [ ] Testar botão de alto contraste em vários contextos.
-- [ ] Quando a página está em modo dark, é necessário retornar ao modo light para gerar o PDF, caso contrário o PDF estará ilegível. Adicionar script ao pdf.js para corrigir isso.
+- [x] Quando a página está em modo dark, é necessário retornar ao modo light para gerar o PDF, caso contrário o PDF estará ilegível. Adicionar script ao pdf.js para corrigir isso.
 - [ ] Adcionar botão para mudar o idioma do texto.
