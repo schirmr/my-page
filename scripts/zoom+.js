@@ -3,7 +3,7 @@ var zoomMaisDiv = document.getElementById("zoom+")
 
 zoomMaisDiv.addEventListener("click", function () {
 
-    var elementos = document.querySelectorAll("p, code, li, h2, table, small")
+    var elementos = document.querySelectorAll("p, code, li, h2, table, small, em")
 
 
     elementos.forEach(function (elemento) {

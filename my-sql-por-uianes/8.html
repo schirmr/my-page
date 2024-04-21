@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <progress value="10" max="100"></progress>
+        <progress value="16" max="100"></progress>
     </nav>
     <main class="container">
         <aside>
@@ -28,39 +28,30 @@
             <div id="darkmode">Alto<br>Contraste</div>
         </aside>
         <article id="texto">
-            <h2>5. Criando a primeira tabela</h2>
+            <h2>8. Auto incremento</h2>
             <div id="autor">
                 <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
                     Última atualização em 04 out. 2023</small>
             </div>
-            <p>Uma tabela em um "Banco de Dados" é composta por colunas e linhas. Em termos de "Banco de Dados",
-                chamamos as colunas de ATRIBUTOS, enquanto as linhas podem ser chamadas de REGISTROS ou TUPLAS, sendo o
-                segundo nome o mais comum.
+            <p>O auto incremento é uma funcionalidade comum em bancos de dados que permite que os valores de uma coluna
+                numérica sejam gerados automaticamente. Geralmente utilizamos essa função em chaves primárias.
             </p>
-            <p>Na etapa anterior, durante a diagramação, utilizamos o modelo relacional para representar a estrutura das
-                tabelas, como exemplificado na imagem abaixo:
-            </p>
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col" colspan="2">Cliente</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><b>PK</b></td>
-                        <td>cliente_id INT(4) NOT NULL</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>cliente_nome VARCHAR(100) NOT NULL</td>
-                    </tr>
-                </tbody>
-            </table>
             <p>
-                Nesse exemplo, temos os atributos "cliente_id" e "cliente_nome". As linhas são exemplos de tuplas,
-                representando registros específicos da tabela. Cada linha (tupla/registro) é um cliente diferente
-                cadastrado.
+                Para adicionar o auto incremento em um atributo:
+            </p>
+            <code>nomeAtributo <span>TipoNumérico(tamanho) NOT NULL</span> <em>AUTO_INCREMENT</em></code>
+            <p>Exemplo:</p>
+            <code><span>CREATE TABLE</span> Cliente( </code> <br>
+            <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code> <br>
+            <code style="padding-left: 20px;">cliente_nome <span>VARCHAR(50) NOT NULL</span>,</code> <br>
+            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code> <br>
+            <code>);</code>
+            <p>
+                Agora o valor da chave primária será definido automaticamente. Partindo do número 1 e seguindo até o
+                último valor disponível para aquele campo.
+            </p>
+            <p>
+                Exemplo (Observe a coluna cliente_id):
             </p>
             <table>
                 <thead>
@@ -71,36 +62,37 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>1001</td>
+                        <td>1</td>
                         <td>Uianes</td>
                     </tr>
                     <tr>
-                        <td>1002</td>
+                        <td>2</td>
                         <td>Maria</td>
                     </tr>
                     <tr>
-                        <td>1003</td>
+                        <td>3</td>
                         <td>José</td>
                     </tr>
                     <tr>
-                        <td>1004</td>
+                        <td>4</td>
                         <td>Antônio</td>
                     </tr>
                     <tr>
-                        <td>1005</td>
+                        <td>5</td>
                         <td>João</td>
                     </tr>
                 </tbody>
             </table>
             <p>
-                Para criar a estrutura da tabela do exemplo apresentado, utilizamos as seguintes instruções na linguagem
-                SQL:
+                Para alterar o valor de início do auto_increment, ou seja, para a função iniciar com outro valor
+                (diferente de 1), usamos o seguinte comando:
             </p>
-            <code><span>CREATE TABLE</span> Cliente(</code> <br>
-            <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span>,</code> <br>
-            <code style="padding-left: 20px;">cliente_nome <span>VARCHAR(50) NOT NULL</span>,</code> <br>
-            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id) </code><br>
-            <code>);</code>
+            <code><span>ALTER TABLE</span> nomeTabela</code> <br>
+            <code><em>AUTO_INCREMENT</em> <span>=</span> 100;</code>
+            <p>Neste caso, o auto incremento iniciará com o valor 100.</p>
+            <p><span id="alerta">Cuidado!</span> Ao inserir um valor em uma tabela, nas colunas (atributos) que possuem a propriedade
+                "auto_increment", NÃO devemos adicionar um valor manualmente, pois o SGBD fará isso automaticamente.
+                Esse assunto será melhor abordado nas anotações sobre o comando <span id="alerta">INSERT INTO</span>.</p>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
@@ -110,7 +102,6 @@
     <script src="../scripts/print.js"></script>
     <script src="../scripts/pdf.js"></script>
     <script src="../scripts/darkmode.js"></script>
-    <script src="../scripts/lightmode.js"></script>
 </body>
 
 </html>
