@@ -24,3 +24,11 @@ Funcionalidades atuais:
 - [ ] Adicionar botão para modo daltônio, alterando o padrão de cores.
 - [ ] Adicionar navegação por teclado.
 - [ ] Adicionar botão de áudio para reproduzir a leitura da página via leitor.
+- [ ] Adicionar integração com o V-LIBRAS, se possível.
+- [x] Adicionar integração para o navegador ler a página, pensei na SpeechSynthesis
+- [x] Adicionar controles para aumentar velocidade
+- [x] Adicionar controles para diminuir velocidade
+- [x] Adicionar controles para pausar a fala
+- [x] Botão de volume - 
+- [ ] Botão de volume + (funcionando parcialmente, pois é necessário aumentar o volume do sistema)
+- [ ] Testar funcionalidades de voz em outros navegadores.

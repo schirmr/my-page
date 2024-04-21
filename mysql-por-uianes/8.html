@@ -26,6 +26,14 @@
             <div id="imprimir">Imprimir</div>
             <div id="pdf">PDF</div>
             <div id="darkmode">Alto<br>Contraste</div>
+            <hr>
+            <div id="ouvir">Ouvir o texto</div>
+            <div id="pausar">Pausar</div>
+            <div id="retomar">Retomar</div>
+            <div id="velocidademais">Aumentar a velocidade</div>
+            <div id="velocidademenos">Diminuir a velocidade</div>
+            <div id="volumemais">Aumentar o volume</div>
+            <div id="volumemenos">Diminuir o volume</div>
         </aside>
         <article id="texto">
             <h2>8. Auto incremento</h2>
@@ -42,7 +50,8 @@
             <code>nomeAtributo <span>TipoNumérico(tamanho) NOT NULL</span> <em>AUTO_INCREMENT</em></code>
             <p>Exemplo:</p>
             <code><span>CREATE TABLE</span> Cliente( </code> <br>
-            <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code> <br>
+            <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code>
+            <br>
             <code style="padding-left: 20px;">cliente_nome <span>VARCHAR(50) NOT NULL</span>,</code> <br>
             <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code> <br>
             <code>);</code>
@@ -90,9 +99,11 @@
             <code><span>ALTER TABLE</span> nomeTabela</code> <br>
             <code><em>AUTO_INCREMENT</em> <span>=</span> 100;</code>
             <p>Neste caso, o auto incremento iniciará com o valor 100.</p>
-            <p><span id="alerta">Cuidado!</span> Ao inserir um valor em uma tabela, nas colunas (atributos) que possuem a propriedade
+            <p><span id="alerta">Cuidado!</span> Ao inserir um valor em uma tabela, nas colunas (atributos) que possuem
+                a propriedade
                 "auto_increment", NÃO devemos adicionar um valor manualmente, pois o SGBD fará isso automaticamente.
-                Esse assunto será melhor abordado nas anotações sobre o comando <span id="alerta">INSERT INTO</span>.</p>
+                Esse assunto será melhor abordado nas anotações sobre o comando <span id="alerta">INSERT INTO</span>.
+            </p>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
@@ -102,6 +113,7 @@
     <script src="../scripts/print.js"></script>
     <script src="../scripts/pdf.js"></script>
     <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
 </body>
 
 </html>
