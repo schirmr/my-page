@@ -33,3 +33,5 @@ Funcionalidades atuais:
 - [ ] Botão de volume + (funcionando parcialmente, pois é necessário aumentar o volume do sistema)
 - [ ] Testar funcionalidades de voz em outros navegadores.
 - [ ] Ajustar responsividade do menu e dos textos.
+- [x] Adicionar botão para gerar .pptx, pesquisei para ser .odt mas não achei uma biblioteca para isso. O slide gerado vai requerer ajustes do usuário, pois não fica perfeito, mas adianta boa parte do trabalho.
+- [ ] Para que o slide receba cor, é necessário adidcionar um css inline, talvez dê para fazer algo desse tipo no pptx.js adicionando no elemento.

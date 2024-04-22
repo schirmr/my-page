@@ -25,45 +25,62 @@
             <hr>
             <div id="imprimir">Imprimir</div>
             <div id="pdf">PDF</div>
+            <div id="pptx">Gerar <br> Apresentação</div>
             <div id="darkmode">Alto<br>Contraste</div>
+            <hr>
+            <div id="ouvir">Ouvir o texto</div>
+            <div id="pausar">Pausar</div>
+            <div id="retomar">Retomar</div>
+            <div id="velocidademais">Aumentar a velocidade</div>
+            <div id="velocidademenos">Diminuir a velocidade</div>
+            <div id="volumemais">Aumentar o volume</div>
+            <div id="volumemenos">Diminuir o volume</div>
         </aside>
         <article id="texto">
             <h2>4. Criando a primeira base de dados</h2>
             <div id="autor">
-                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
-                    Última atualização em 04 out. 2023</small>
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
             </div>
-            <p>Apesar de utilizarmos, no Brasil, o nome "Banco de Dados", é mais adequado o termo "Base de Dados". Para
-                fins didáticos, vamos considerar o conceito de "Banco de Dados" como um conjunto de várias bases de
-                dados, e a "Base de Dados" como o conjunto de tabelas relacionadas entre si.
+            <p>Apesar de utilizarmos, no Brasil, o nome "Banco de Dados", é mais adequado o termo "Base de Dados". Para fins didáticos, vamos considerar o conceito de "Banco de Dados" como um conjunto de várias bases de dados, e a "Base de Dados" como o conjunto de tabelas relacionadas entre si.
             </p>
             <p>Portanto, iniciamos a construção do nosso banco de dados pela criação da base de dados.
             </p>
             <p>
                 Para criar uma base de dados, utilizamos o comando:
             </p>
-            <code><span>CREATE DATABASE</span> nomeDaBaseDeDados;</code>
+            <div class="code">
+                <code><span>CREATE DATABASE</span> nomeDaBaseDeDados;</code>
+            </div>
             <p>
                 Observações: Não podemos utilizar espaços para nomear uma base de dados. Caso seja necessário separar as palavras no nome, utilize o caractere "_", assim: nome_da_base_de_dados. Você pode utilizar acentos e números no nome, mas evite o uso de caracteres especiais.
             </p>
             <p>
                 Para visualizar todas as bases de dados criadas, utilizamos o comando: 
             </p>
-            <code><span>SHOW DATABASES</span>;</code>
+            <div class="code">
+                <code><span>SHOW DATABASES</span>;</code>
+            </div>
             <p><span id="alerta">Cuidado!</span> Caso você tenha criado uma Base de Dados que precisa ser excluída, você pode utilizar o comando: </p>
-            <code><span>DROP DATABASE </span>nomeDaBaseDeDados;</code>
+            <div class="code">    
+                <code><span>DROP DATABASE </span>nomeDaBaseDeDados;</code>
+            </div>
             <p>Isso excluirá todas as tabelas e dados contidos naquela base de dados. </p>
             <p>Para selecionar uma base de dados e poder criar suas tabelas, utilizamos o comando: </p>
-            <code><span>USE</span> nomeDaBaseDeDados;</code>
+            <div class="code">
+                <code><span>USE</span> nomeDaBaseDeDados;</code>
+            </div>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
     <script src="../scripts/nav.js"></script>
     <script src="../scripts/zoom+.js"></script>
     <script src="../scripts/zoom-.js"></script>
     <script src="../scripts/print.js"></script>
     <script src="../scripts/pdf.js"></script>
     <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
 </body>
 
 </html>

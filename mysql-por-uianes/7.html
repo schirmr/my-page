@@ -25,50 +25,71 @@
             <hr>
             <div id="imprimir">Imprimir</div>
             <div id="pdf">PDF</div>
+            <div id="pptx">Gerar <br> Apresentação</div>
             <div id="darkmode">Alto<br>Contraste</div>
+            <hr>
+            <div id="ouvir">Ouvir o texto</div>
+            <div id="pausar">Pausar</div>
+            <div id="retomar">Retomar</div>
+            <div id="velocidademais">Aumentar a velocidade</div>
+            <div id="velocidademenos">Diminuir a velocidade</div>
+            <div id="volumemais">Aumentar o volume</div>
+            <div id="volumemenos">Diminuir o volume</div>
         </aside>
         <article id="texto">
             <h2>7. Chaves Primária e Estrangeira</h2>
             <div id="autor">
-                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
-                    Última atualização em 04 out. 2023</small>
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
             </div>
-            <p>A chave primária, chamada de <i>Primary Key</i>, é utilizada para identificar cada tupla (registro) da tabela. A
-                chave primária sempre será um valor único e não pode ser nula. Toda tabela deve ter somente uma chave
-                primária.
+            <p>A chave primária, chamada de <i>Primary Key</i>, é utilizada para identificar cada tupla (registro) da tabela. A chave primária sempre será um valor único e não pode ser nula. Toda tabela deve ter somente uma chave primária.
             </p>
             <p>
                 Para adicionar uma chave primária na criação de uma tabela, usamos o seguinte comando:
             </p>
-            <code><span>PRIMARY KEY</span>(nomeAtributo);</code>
+            <div class="code">
+                <code><span>PRIMARY KEY</span>(nomeAtributo);</code>
+            </div>
             <p>Exemplo:
             </p>
-            <code><span>CREATE TABLE</span> Cliente(</code> <br>
-            <code style="padding-left: 20px;">cliente_id<span> INT(4) NOT NULL</span>,</code> <br>
-            <code style="padding-left: 20px;">cliente_nome<span> VARCHAR(50) NOT NULL</span>,</code> <br>
-            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code><br>
-            <code>);</code>
+            <div class="code">
+                <code><span>CREATE TABLE</span> Cliente(</code> <br>
+                <code style="padding-left: 20px;">cliente_id<span> INT(4) NOT NULL</span>,</code> <br>
+                <code style="padding-left: 20px;">cliente_nome<span> VARCHAR(50) NOT NULL</span>,</code> <br>
+                <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code><br>
+                <code>);</code>
+            </div>
             <p>Para adicionar uma chave primária em uma tabela já criada, usamos o seguinte comando:</p>
-            <code><span>ALTER TABLE</span> nomeTabela</code> <br>
-            <code><span>ADD PRIMARY KEY</span>(nomeAtributo);</code>
+            <div class="code">
+                <code><span>ALTER TABLE</span> nomeTabela</code> <br>
+                <code><span>ADD PRIMARY KEY</span>(nomeAtributo);</code>
+            </div>
             <p>Exemplo:</p>
-            <code><span>ALTER TABLE</span> Cliente</code> <br>
-            <code><span>ADD PRIMARY KEY</span>(cliente_id);</code>
+            <div class="code">
+                <code><span>ALTER TABLE</span> Cliente</code> <br>
+                <code><span>ADD PRIMARY KEY</span>(cliente_id);</code>
+            </div>
             <p>Para remover uma chave primária, usamos o seguinte comando:</p>
-            <code><span>ALTER TABLE</span> nomeTabela</code> <br>
-            <code><span>DROP PRIMARY KEY</span></code>
+            <div class="code">
+                <code><span>ALTER TABLE</span> nomeTabela</code> <br>
+                <code><span>DROP PRIMARY KEY</span></code>
+            </div>
             <p>Exemplo:</p>
-            <code><span>ALTER TABLE</span> Cliente</code> <br>
-            <code><span>DROP PRIMARY KEY</span></code>
+            <div class="code">
+                <code><span>ALTER TABLE</span> Cliente</code> <br>
+                <code><span>DROP PRIMARY KEY</span></code>
+            </div>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
     <script src="../scripts/nav.js"></script>
     <script src="../scripts/zoom+.js"></script>
     <script src="../scripts/zoom-.js"></script>
     <script src="../scripts/print.js"></script>
     <script src="../scripts/pdf.js"></script>
     <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
 </body>
 
 </html>

@@ -32,23 +32,25 @@ progress {
 
 aside {
     min-width: 70px;
-    max-width: 80px; /* Defina um valor máximo para evitar que o menu lateral fique muito largo */
+    max-width: 120px;
     position: fixed;
     background-color: lightgoldenrodyellow;
     left: 0;
     top: 0;
     height: 100vh;
+    overflow-y: auto;
 }
 
 .dark aside{
     min-width: 70px;
-    max-width: 80px; /* Defina um valor máximo para evitar que o menu lateral fique muito largo */
+    max-width: 120px;
     position: fixed;
     background-color: rgb(45, 45, 45);
     color: #fff;
     left: 0;
     top: 0;
     height: 100vh;
+    overflow-y: auto;
 }
 
 aside div {
@@ -58,7 +60,7 @@ aside div {
 }
 
 article {
-    margin-left: 100px;
+    margin-left: 120px;
 }
 
 /*Títulos*/

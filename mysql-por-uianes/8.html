@@ -25,6 +25,7 @@
             <hr>
             <div id="imprimir">Imprimir</div>
             <div id="pdf">PDF</div>
+            <div id="pptx">Gerar <br> Apresentação</div>
             <div id="darkmode">Alto<br>Contraste</div>
             <hr>
             <div id="ouvir">Ouvir o texto</div>
@@ -38,35 +39,33 @@
         <article id="texto">
             <h2>8. Auto incremento</h2>
             <div id="autor">
-                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
-                    Última atualização em 04 out. 2023</small>
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
             </div>
-            <p>O auto incremento é uma funcionalidade comum em bancos de dados que permite que os valores de uma coluna
-                numérica sejam gerados automaticamente. Geralmente utilizamos essa função em chaves primárias.
+            <p>O auto incremento é uma funcionalidade comum em bancos de dados que permite que os valores de uma coluna numérica sejam gerados automaticamente. Geralmente utilizamos essa função em chaves primárias.
             </p>
             <p>
                 Para adicionar o auto incremento em um atributo:
             </p>
             <code>nomeAtributo <span>TipoNumérico(tamanho) NOT NULL</span> <em>AUTO_INCREMENT</em></code>
             <p>Exemplo:</p>
-            <code><span>CREATE TABLE</span> Cliente( </code> <br>
-            <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code>
-            <br>
-            <code style="padding-left: 20px;">cliente_nome <span>VARCHAR(50) NOT NULL</span>,</code> <br>
-            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code> <br>
-            <code>);</code>
+            <div class="code">
+                <code><span>CREATE TABLE</span> Cliente( </code> <br>
+                <code style="padding-left: 20px;">cliente_id <span>INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code><br>
+                <code style="padding-left: 20px;">cliente_nome <span>VARCHAR(50) NOT NULL</span>,</code> <br>
+                <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id)</code> <br>
+                <code>);</code>
+            </div>
             <p>
-                Agora o valor da chave primária será definido automaticamente. Partindo do número 1 e seguindo até o
-                último valor disponível para aquele campo.
+                Agora o valor da chave primária será definido automaticamente. Partindo do número 1 e seguindo até o último valor disponível para aquele campo.
             </p>
             <p>
                 Exemplo (Observe a coluna cliente_id):
             </p>
-            <table>
+            <table id="table">
                 <thead>
                     <tr>
-                        <th scope="col">cliente_id</th>
-                        <th scope="col">cliente_nome</th>
+                        <td scope="col">cliente_id</td>
+                        <td scope="col">cliente_nome</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -93,20 +92,19 @@
                 </tbody>
             </table>
             <p>
-                Para alterar o valor de início do auto_increment, ou seja, para a função iniciar com outro valor
-                (diferente de 1), usamos o seguinte comando:
+                Para alterar o valor de início do auto_increment, ou seja, para a função iniciar com outro valor (diferente de 1), usamos o seguinte comando:
             </p>
-            <code><span>ALTER TABLE</span> nomeTabela</code> <br>
-            <code><em>AUTO_INCREMENT</em> <span>=</span> 100;</code>
+            <div class="code">
+                <code><span>ALTER TABLE</span> nomeTabela</code> <br>
+                <code><em>AUTO_INCREMENT</em> <span>=</span> 100;</code>
+            </div>
             <p>Neste caso, o auto incremento iniciará com o valor 100.</p>
-            <p><span id="alerta">Cuidado!</span> Ao inserir um valor em uma tabela, nas colunas (atributos) que possuem
-                a propriedade
-                "auto_increment", NÃO devemos adicionar um valor manualmente, pois o SGBD fará isso automaticamente.
-                Esse assunto será melhor abordado nas anotações sobre o comando <span id="alerta">INSERT INTO</span>.
+            <p><span id="alerta">Cuidado!</span> Ao inserir um valor em uma tabela, nas colunas (atributos) que possuem a propriedade "auto_increment", NÃO devemos adicionar um valor manualmente, pois o SGBD fará isso automaticamente. Esse assunto será melhor abordado nas anotações sobre o comando <span id="alerta">INSERT INTO</span>.
             </p>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
     <script src="../scripts/nav.js"></script>
     <script src="../scripts/zoom+.js"></script>
     <script src="../scripts/zoom-.js"></script>
@@ -114,6 +112,7 @@
     <script src="../scripts/pdf.js"></script>
     <script src="../scripts/darkmode.js"></script>
     <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
 </body>
 
 </html>

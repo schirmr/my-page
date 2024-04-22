@@ -25,13 +25,21 @@
             <hr>
             <div id="imprimir">Imprimir</div>
             <div id="pdf">PDF</div>
+            <div id="pptx">Gerar <br> Apresentação</div>
             <div id="darkmode">Alto<br>Contraste</div>
+            <hr>
+            <div id="ouvir">Ouvir o texto</div>
+            <div id="pausar">Pausar</div>
+            <div id="retomar">Retomar</div>
+            <div id="velocidademais">Aumentar a velocidade</div>
+            <div id="velocidademenos">Diminuir a velocidade</div>
+            <div id="volumemais">Aumentar o volume</div>
+            <div id="volumemenos">Diminuir o volume</div>
         </aside>
         <article id="texto">
             <h2>6. Tipos de dados</h2>
             <div id="autor">
-                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br>
-                    Última atualização em 04 out. 2023</small>
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
             </div>
             <p>Cada atributo deve possuir um tipo. Os tipos são textuais, numéricos ou de data e hora.
             </p>
@@ -39,54 +47,43 @@
             <ul>
                 <li>CHAR(tamanho): Uma sequência de caracteres com tamanho fixo. Pode receber de 0 até 255 caracteres.
                 </li>
-                <li>VARCHAR(tamanho): Uma sequência de caracteres com tamanho variável. Pode receber de 0 até 65535
-                    caracteres.</li>
+                <li>VARCHAR(tamanho): Uma sequência de caracteres com tamanho variável. Pode receber de 0 até 65535 caracteres.</li>
                 <li>TEXT(tamanho): Recebe um texto com até 65.535 bytes.</li>
-                <li>BLOB(tamanho): Recebe uma sequência chamada de BLOB (Binary Large Objects). Pode receber uma
-                    sequência de até 65.535 bytes. Geralmente, os DBAs utilizam o formato BLOB para salvar arquivos de
-                    imagem na base de dados.</li>
+                <li>BLOB(tamanho): Recebe uma sequência chamada de BLOB (Binary Large Objects). Pode receber uma sequência de até 65.535 bytes. Geralmente, os DBAs utilizam o formato BLOB para salvar arquivos de imagem na base de dados.</li>
                 <li>LONGTEXT: Recebe um texto com até 4.294.967.295 caracteres.</li>
                 <li>LONGBLOB: Recebe uma sequência de até 4.294.967.295 bytes.</li>
-                <li>ENUM(valor1, valor2, valor3, ...): Um objeto que pode ter apenas um valor escolhido na lista de
-                    valores possíveis. Cada ENUM pode receber até 65.535 valores nesta lista.</li>
-                <li>SET(valor1, valor2, valor3, ...): Um objeto que pode ter um ou mais valores escolhidos em uma lista
-                    de valores possíveis. Cada SET pode receber até 64 valores.</li>
+                <li>ENUM(valor1, valor2, valor3, ...): Um objeto que pode ter apenas um valor escolhido na lista de valores possíveis. Cada ENUM pode receber até 65.535 valores nesta lista.</li>
+                <li>SET(valor1, valor2, valor3, ...): Um objeto que pode ter um ou mais valores escolhidos em uma lista de valores possíveis. Cada SET pode receber até 64 valores.</li>
             </ul>
             <p>Tipos mais comuns para números:</p>
             <ul>
-                <li>BOOL ou BOOLEAN: Receberá um valor, se o valor for 0, será considerado como FALSO; se o valor for
-                    diferente de 0, será considerado como VERDADEIRO.</li>
-                <li>SMALLINT(tamanho): Aceita números inteiros no intervalo de -32.768 a 32.767. Sem o sinal, os valores
-                    aceitos vão de 0 a 65.535.</li>
-                <li>INT(tamanho) ou INTEGER(tamanho): Receberá um valor inteiro no intervalo de -2.147.483.648 a
-                    2.147.483.647. Sem o sinal, os valores aceitos vão de 0 a 4.294.967.295.</li>
-                <li>BIGINT(tamanho): Receberá um valor inteiro no intervalo de -9.223.372.036.854.775.808 a
-                    9.223.372.036.854.775.807. Sem o sinal, os valores aceitos vão de 0 a 18.446.744.073.709.551.615.
+                <li>BOOL ou BOOLEAN: Receberá um valor, se o valor for 0, será considerado como FALSO; se o valor for diferente de 0, será considerado como VERDADEIRO.</li>
+                <li>SMALLINT(tamanho): Aceita números inteiros no intervalo de -32.768 a 32.767. Sem o sinal, os valores aceitos vão de 0 a 65.535.</li>
+                <li>INT(tamanho) ou INTEGER(tamanho): Receberá um valor inteiro no intervalo de -2.147.483.648 a 2.147.483.647. Sem o sinal, os valores aceitos vão de 0 a 4.294.967.295.</li>
+                <li>BIGINT(tamanho): Receberá um valor inteiro no intervalo de -9.223.372.036.854.775.808 a 9.223.372.036.854.775.807. Sem o sinal, os valores aceitos vão de 0 a 18.446.744.073.709.551.615.
                 </li>
                 <li>DECIMAL: Receberá um valor decimal entre 0 e 9.9.</li>
-                <li>FLOAT(tamanho): Receberá um valor decimal, sendo que o tamanho determina até quantos números poderão
-                    existir após o ".".</li>
+                <li>FLOAT(tamanho): Receberá um valor decimal, sendo que o tamanho determina até quantos números poderão existir após o ".".</li>
             </ul>
             <p>Tipos mais comuns para data e hora:</p>
             <ul>
-                <li>DATE: Armazena uma data no formato YYYY-MM-DD, ou seja, Ano-Mês-Dia. Aceita datas entre 1000-01-01
-                    até 9999-12-31.</li>
-                <li>DATETIME: Combinação de data e hora no formato YYYY-MM-DD hh:mm:ss. Se adicionar uma cláusula
-                    DEFAULT, o valor a ser registrado é a data e hora do momento em que o SGBD inserir o valor na base
-                    de dados.</li>
+                <li>DATE: Armazena uma data no formato YYYY-MM-DD, ou seja, Ano-Mês-Dia. Aceita datas entre 1000-01-01 até 9999-12-31.</li>
+                <li>DATETIME: Combinação de data e hora no formato YYYY-MM-DD hh:mm:ss. Se adicionar uma cláusula DEFAULT, o valor a ser registrado é a data e hora do momento em que o SGBD inserir o valor na base de dados.</li>
                 <li>TIME: Armazena uma hora no formato hh:mm:ss. Suporta valores entre '-838:59:59' e '838:59:59'.</li>
-                <li>YEAR: Armazena um ano em formato de 4 dígitos. Os valores aceitos estão entre 1901 e 2155. O valor
-                    0000 também é aceito.</li>
+                <li>YEAR: Armazena um ano em formato de 4 dígitos. Os valores aceitos estão entre 1901 e 2155. O valor 0000 também é aceito.</li>
             </ul>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
     <script src="../scripts/nav.js"></script>
     <script src="../scripts/zoom+.js"></script>
     <script src="../scripts/zoom-.js"></script>
     <script src="../scripts/print.js"></script>
     <script src="../scripts/pdf.js"></script>
     <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
 </body>
 
 </html>
