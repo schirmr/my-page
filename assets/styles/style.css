@@ -39,6 +39,7 @@ aside {
     top: 0;
     height: 100vh;
     overflow-y: auto;
+    margin-bottom: 50px;
 }
 
 .dark aside{
@@ -51,6 +52,7 @@ aside {
     top: 0;
     height: 100vh;
     overflow-y: auto;
+    margin-bottom: 50px;
 }
 
 aside div {

@@ -20,8 +20,8 @@ document.getElementById("pptx").addEventListener("click", function () {
     slide.addText(titulo, tituloprops)
     const elementos = document.querySelectorAll('#texto > *')
     const elementosFiltrados = Array.from(elementos).filter(elemento => elemento.tagName !== 'BR' && elemento.tagName !== 'H2')
-    let textboxOpts = { x: 1, y: 1, color: "363636" }
     elementosFiltrados.forEach(elemento => {
+        let textboxOpts = { x: 1, y: 1, color: "363636" }
         if (elemento.tagName.toLowerCase() === 'img') {
             let slide = pptx.addSlide()
             const src = elemento.getAttribute('src')
@@ -37,8 +37,7 @@ document.getElementById("pptx").addEventListener("click", function () {
                 linhas.push(linha)
             })
             slide.addTable(linhas, { x: 0.5, y: 3.5, w: 9, h: 1 })
-        }
-        else {
+        } else {
             let slide = pptx.addSlide()
             slide.addText(elemento.textContent.trim(), textboxOpts)
         }
