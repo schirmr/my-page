@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <progress value="24" max="100"></progress>
+    </nav>
+    <main class="container">
+        <aside>
+            <div><a href="index.html"> Início </a></div>
+            <hr>
+            <div> Menu: </div>
+            <div id="zoom+"> + </div>
+            <div id="zoom-"> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
+            <div><a href="" id="prox">&gt;</a></div>
+            <hr>
+            <div id="imprimir">Imprimir</div>
+            <div id="pdf">PDF</div>
+            <div id="pptx">Gerar <br> Apresentação</div>
+            <div id="darkmode">Alto<br>Contraste</div>
+            <hr>
+            <div id="ouvir">Ouvir o texto</div>
+            <div id="pausar">Pausar</div>
+            <div id="retomar">Retomar</div>
+            <div id="velocidademais">Aumentar a velocidade</div>
+            <div id="velocidademenos">Diminuir a velocidade</div>
+            <div id="volumemais">Aumentar o volume</div>
+            <div id="volumemenos">Diminuir o volume</div>
+        </aside>
+        <article id="texto">
+            <h2>12. Inserir valores em uma tabela</h2>
+            <div id="autor">
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+            </div>
+            <p>INSERT INTO, traduzido como INSERIR DENTRO DE, é um dos comandos básicos em SQL, utilizado para criar novos registros na tabela, ou seja, gravar novos valores/tuplas/linhas.
+            </p>
+            <div class="code">
+                <p>Essa instrução pode ser definida de duas formas. A primeira forma é informando todas as colunas e seus respectivos valores em seguida.</p>
+                <code><span>INSERT INTO </span>nomeTabela (coluna1, coluna2, coluna3, ...)</code><br>
+                <code><span>VALUES</span> (valor1, valor2, valor3, ...);</code>
+            </div>
+            <div class="code">
+                <p>Outra forma de realizar a mesma ação ocorre assim, mas somente se você inserir valores em todas as colunas:
+                </p>
+                <code><span>INSERT INTO </span>nomeTabela</code><br>
+                <code><span>VALUES</span> (valor1, valor2, valor3, ...);</code>
+            </div>
+            <div class="code">
+                <p>Exemplo:</p>
+                <code><span>CREATE TABLE</span> Cliente(</code><br>
+                <code style="padding-left: 20px;">cliente_id <span> INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code><br>
+                <code style="padding-left: 20px;">cliente_nome <span> VARCHAR(100) NOT NULL</span>,</code><br>
+                <code style="padding-left: 20px;">cliente_email <span> VARCHAR(100) NOT NULL</span>,</code><br>
+                <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id),</code><br>
+                <code style="padding-left: 20px;"><em>UNIQUE</em>(cliente_email)</code><br>
+                <code>);</code>
+                <br>
+                <br>
+                <code><span>INSERT INTO </span>Cliente (cliente_nome, cliente_email)</code><br>
+                <code><span>VALUES</span> ("Uianes", "uianes.biondo@iffarroupilha.edu.br");</code>
+            </div>
+            <p><span id="alerta">Cuidado!</span> Como a chave primária (cliente_id) recebeu a função <em>AUTO_INCREMENT</em> repare que na lista de colunas de INSERT INTO não adicionamos a PK. Mas você pode, desde que não insira um valor duplicado (ou já registrado).</p>
+            <div class="code">
+                <p>Caso você executasse o seguinte comando:</p>
+                <code><span>INSERT INTO </span>Cliente (cliente_email)</code><br>
+                <code><span>VALUES</span> ("uianes.biondo@iffarroupilha.edu.br");</code><br>
+                <p>Apareceria uma mensagem de erro, pois "cliente_nome" foi definido como NOT NULL, e ao deixar uma coluna de fora da lista do INSERT INTO, o valor padrão a ser gravado é NULL. Portanto, atributos que receberam "NOT NULL" não podem ser deixados de fora.</p>
+            </div>
+            <div class="code">
+                <p>Caso a tabela fosse a seguinte:</p>
+                <code><span>CREATE TABLE</span> Cliente(</code><br>
+                <code style="padding-left: 20px;">cliente_id <span> INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code><br>
+                <code style="padding-left: 20px;">cliente_nome <span> VARCHAR(100)</span>,</code><br>
+                <code style="padding-left: 20px;">cliente_email <span> VARCHAR(100) NOT NULL</span>,</code><br>
+                <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(cliente_id),</code><br>
+                <code style="padding-left: 20px;"><em>UNIQUE</em>(cliente_email)</code><br>
+                <code>);</code>
+            </div>
+            <div class="code">
+                <p>E o comando a ser executado posteriormente fosse:</p>
+                <code><span>INSERT INTO </span>Cliente (cliente_email)</code><br>
+                <code><span>VALUES</span> ("uianes.biondo@iffarroupilha.edu.br");</code><br>
+                <p>Neste caso, sim, tudo funcionaria. E os dados cadastrados seriam:</p>
+                <p>cliente_id -> 1<br>
+                cliente_nome -> NULL<br>
+                cliente_email -> "uianes.biondo@iffarroupilha.edu.br"</p>
+            </div>
+            <p>Outra observação!</p>
+            <div class="code">
+                <p>Caso o comando acima fosse executado novamente:</p>
+                <code><span>INSERT INTO </span>Cliente (cliente_email)</code><br>
+                <code><span>VALUES</span> ("uianes.biondo@iffarroupilha.edu.br");</code><br>
+                <p>Um erro apareceria, informando que já existe esse valor cadastrado na tabela. E o campo "cliente_email" é <em>UNIQUE</em>, ou seja, não é possível cadastrar um valor duas ou mais vezes.</p>
+            </div>
+            <div class="code">
+                <p>E como fazer para cadastrar vários usuários de uma só vez? Basta utilizar a seguinte sintaxe:</p>
+                <code><span>INSERT INTO </span>nomeTabela (atributo1, atributo2, ...)</code><br>
+                <code><span>VALUES</span> (cadastro1Valor1, cadastro1Valor2, ...),</code><br>
+                <code>(cadastro2Valor1, cadastro2Valor2, ...),</code><br>
+                <code>(cadastro3Valor1, cadastro3Valor2, ...);</code><br>
+                <p>Separamos os diferentes cadastros através de ",". Porém, o último cadastrado não pode receber ",", e sim, ";".</p>
+            </div>
+            <p>Sobre a forma de representar os valores, utilizamos o seguinte padrão:</p>
+            <p>
+                Valores textuais serão representados dentro de aspas. Exemplo: "Nome".<br><br>
+                Valores numéricos inteiros serão representados sem aspas. Exemplo: 10.<br><br>
+                Valores numéricos decimais serão representados sem aspas, utilizando ".". Exemplo: 9.9<br><br>
+                Valores de data e hora serão representados por aspas, em seu respectivo padrão.<br><br>
+                Exemplo de data: "2023-07-25".<br><br>
+                Exemplo de hora: "01:22:30".
+            </p>
+        </article>
+    </main>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
+</body>
+
+</html>

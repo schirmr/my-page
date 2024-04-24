@@ -11,7 +11,7 @@
 
 <body>
     <nav>
-        <progress value="22" max="100"></progress>
+        <progress value="26" max="100"></progress>
     </nav>
     <main class="container">
         <aside>
@@ -37,23 +37,16 @@
             <div id="volumemenos">Diminuir o volume</div>
         </aside>
         <article id="texto">
-            <h2>11. Apagar uma tabela criada</h2>
+            <h2>13. Apagar todos os valores inseridos em uma tabela</h2>
             <div id="autor">
                 <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
             </div>
             <div class="code">
-                <p>Caso você tenha criado uma tabela e deseja apagá-la, basta utilizar o seguinte comando:
+                <p>Caso você tenha criado uma tabela e deseja apagar somente os valores inseridos nela, sem apagar a própria tabela, basta utilizar o seguinte comando:
                 </p>
-                <code><span>DROP TABLE</span> nomeTabela;</code>
+                <code><span>TRUNCATE </span>nomeTabela;</code>
             </div>
-            <p><span id="alerta">Cuidado!</span> Esse comando apagará a tabela e também todos os dados contidos nela.</p>
-            <div class="code">    
-                <p>Vale observar que você pode utilizar a seguinte estrutura para visualizar todas as tabelas de uma determinada base de dados:</p>
-                <code><span>SHOW DATABASES</span>;</code> <br>
-                <code><span>USE </span>nomeDaBaseDeDados;</code> <br>
-                <code><span>SHOW TABLES</span>;</code> <br>
-                <p>Isso mostrará todas as tabelas criadas em uma base de dados.</p>
-            </div>
+            <p><span id="alerta">Cuidado!</span> Esse comando apagará <b>TODOS</b> os dados de uma tabela, mas não sua estrutura, ou seja, a tabela ainda existe, mas vazia.</p>
         </article>
     </main>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
