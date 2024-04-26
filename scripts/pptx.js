@@ -21,7 +21,7 @@ document.getElementById("pptx").addEventListener("click", function () {
     const elementos = document.querySelectorAll('#texto > *')
     const elementosFiltrados = Array.from(elementos).filter(elemento => elemento.tagName !== 'BR' && elemento.tagName !== 'H2')
     elementosFiltrados.forEach(elemento => {
-        let textboxOpts = { x: 1, y: 1, color: "363636" }
+        let textboxOpts = { x: 1, y: 2, color: "363636" }
         if (elemento.tagName.toLowerCase() === 'img') {
             let slide = pptx.addSlide()
             const src = elemento.getAttribute('src')

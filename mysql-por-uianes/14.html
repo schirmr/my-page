@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+</head>
+
+<body>
+    <nav>
+        <progress value="28" max="100"></progress>
+    </nav>
+    <main class="container">
+        <aside>
+            <div><a href="index.html"> Início </a></div>
+            <hr>
+            <div> Menu: </div>
+            <div id="zoom+"> + </div>
+            <div id="zoom-"> - </div>
+            <div><a href="" id="ant">&lt;</a></div>
+            <div><a href="" id="prox">&gt;</a></div>
+            <hr>
+            <div id="imprimir">Imprimir</div>
+            <div id="pdf">PDF</div>
+            <div id="pptx">Gerar <br> Apresentação</div>
+            <div id="darkmode">Alto<br>Contraste</div>
+            <hr>
+            <div id="ouvir">Ouvir o texto</div>
+            <div id="pausar">Pausar</div>
+            <div id="retomar">Retomar</div>
+            <div id="velocidademais">Aumentar a velocidade</div>
+            <div id="velocidademenos">Diminuir a velocidade</div>
+            <div id="volumemais">Aumentar o volume</div>
+            <div id="volumemenos">Diminuir o volume</div>
+        </aside>
+        <article id="texto">
+            <h2>14. Alterar a estrutura de uma tabela já criada</h2>
+            <div id="autor">
+                <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 25 abr. 2023</small>
+            </div>
+            <div class="code">
+                <p>Em vários momentos anteriormente, foi utilizado um determinado tipo de comando para alterar a estrutura dos exemplos. A estrutura que permite modificar uma tabela é o ALTER TABLE. Essa operação permite realizar 3 funções: adicionar algo na estrutura da tabela, remover algo na estrutura da tabela ou modificar algo na estrutura da tabela. Essas 3 funções envolvem as colunas da tabela e/ou as restrições dela.
+                </p>
+                <code><span>ALTER TABLE</span></code><br>
+            </div>
+            <div class="code">
+                <p>Para adicionar uma coluna em uma tabela existente:</p>
+                <code><span>ALTER TABLE </span>nomeTabela</code><br>
+                <code><span>ADD </span>nomeColuna tipo(tamanho);</code> <br>
+                <p>Pode ser também: </p>
+                <code>ADD <span>COLUMN </span>nomeColuna tipo(tamanho);</code>
+                <p>Exemplo:</p>
+                <code><span>ALTER TABLE </span>Cliente</code> <br>
+                <code><span>ADD</span> CEP_Cliente VARCHAR(9) NOT NULL;</code><br>
+            </div>
+            <div class="code">
+                <p>Para remover uma coluna em uma tabela existente:</p>
+                <code><span>ALTER TABLE </span>nomeTabela</code><br>
+                <code><span>DROP COLUMN </span>nomeColuna;</code> <br>
+                <p>Exemplo:</p>
+                <code><span>ALTER TABLE</span> Cliente</code><br>
+                <code><span>DROP COLUMN</span> CEP_Cliente;</code>
+            </div>
+            <div class="code">
+                <p>Para modificar uma coluna em uma tabela existente:</p>
+                <code><span>ALTER TABLE </span>nomeTabela</code><br>
+                <code><span> MODIFY COLUMN </span>nomeColuna tipo(tamanho);</code><br>
+                <p>Exemplo:</p>
+                <code><span>ALTER TABLE</span> Cliente</code><br>
+                <code><span>MODIFY COLUMN</span> cliente_email VARCHAR(<em>200</em>) NOT NULL;</code> <br>
+                <p>Os demais exemplos de alterações com relação a restrições (CONSTRAINT) foram demonstrados anteriormente.
+                </p>
+            </div>
+        </article>
+    </main>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
+</body>
+
+</html>
