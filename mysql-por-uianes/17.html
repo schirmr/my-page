@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/pure-min.css">
+    <link rel="stylesheet" href="../assets/styles/sidemenu.css">
+    <script src="../scripts/nav.js"></script>
+</head>
+<body>
+    <div id="layout">
+        <div id="menu">
+            <a href="#menu" id="menuLink" class="menu-link">
+                <span></span>
+            </a>
+            <div id="menu-placeholder"></div>
+        </div>
+
+        <div id="main">
+            <progress value="34" max="100"></progress>
+            <div class="pure-g">
+                <div class="content">
+                    <article id="texto">
+                        <h2>17. Valor Padrão (DEFAULT)</h2>
+                        <div id="autor">
+                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+                        </div>
+                        <div class="code">
+                            <p>Utilizamos a restrição DEFAULT para definir um valor padrão para um atributo. Quando o usuário não gravar um valor para determinada coluna, o SGBD usará o valor Default. A sintaxe que utilizamos é a seguinte:
+                            </p>
+                            <code>nomeAtributo Tipo(tamanho) <em>DEFAULT</em> valor</code>
+                        </div>
+                        <div class="code">
+                            <p>Observe o exemplo para adicionar um valor padrão na criação de uma tabela:</p>
+                            <code><span>CREATE TABLE</span> Aluno(</code><br>
+                            <code style="padding-left: 20px;">aluno_id <span> INT(4) NOT NULL AUTO_INCREMENT</span>,</code><br>
+                            <code style="padding-left: 20px;">nome <span> VARCHAR(100) NOT NULL</span>,</code><br>
+                            <code style="padding-left: 20px;">cidade <span> VARCHAR(100) NOT NULL <em>DEFAULT</em> 'Santo Augusto'</span>,</code><br>
+                            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(aluno_id)</code><br>
+                            <code>);</code>
+                        </div>
+                        <div class="code">
+                            <p>Exemplo para registrar a data atual como padrão:</p>
+                            <code><span>CREATE TABLE</span> Aluno(</code><br>
+                            <code style="padding-left: 20px;">aluno_id <span> INT(4) NOT NULL</span> <em>AUTO_INCREMENT</em>,</code><br>
+                            <code style="padding-left: 20px;">nome <span> VARCHAR(100) NOT NULL</span>,</code><br>
+                            <code style="padding-left: 20px;">cidade <span> VARCHAR(100) <em>DEFAULT</em> 'Santo Augusto'</span>,</code><br>
+                            <code style="padding-left: 20px;">data_da_matricula <span> DATE <em>DEFAULT <span>CURRENT_DATE()</span></em>,</span></code><br>
+                            <code style="padding-left: 20px;"><span>PRIMARY KEY</span>(aluno_id)</code><br>
+                            <code>);</code>
+                        </div>
+                        <div class="code">
+                            <p>Para adicionar o valor padrão em uma tabela já existente:</p>
+                            <code><span>ALTER TABLE</span> Cliente</code><br>
+                            <code><span>ALTER</span> cidade <span>SET</span> <em>DEFAULT</em> 'Três Passos';</code>
+                        </div>
+                        <div class="code">
+                            <p>Para apagar um DEFAULT em uma tabela já existente:</p>
+                            <code><span>ALTER TABLE</span> Cliente</code><br>
+                            <code><span>ALTER</span> cidade <span>DROP</span> <em>DEFAULT</em>;</code>
+                        </div>
+                    </article>
+                    <div vw class="enabled">
+                        <div vw-access-button class="active"></div>
+                        <div vw-plugin-wrapper>
+                          <div class="vw-plugin-top-wrapper"></div>
+                        </div>
+                      </div>
+                      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+                      <script>
+                        new window.VLibras.Widget('https://vlibras.gov.br/app');
+                      </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
+    <script src="../scripts/ui.js"></script>
+</body>
+</html>

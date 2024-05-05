@@ -12,37 +12,77 @@
 </head>
 <body>
     <div id="layout">
-        <div id="menu-placeholder"></div>
+        <div id="menu">
+            <a href="#menu" id="menuLink" class="menu-link">
+                <span></span>
+            </a>
+            <div id="menu-placeholder"></div>
+        </div>
 
         <div id="main">
             <progress value="32" max="100"></progress>
             <div class="pure-g">
                 <div class="content">
                     <article id="texto">
-                        <h2>15. Restrições (CONSTRAINT)</h2>
+                        <h2>16. Verificações (CHECK)</h2>
                         <div id="autor">
                             <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
                         </div>
                         <div class="code">
-                            <p>As restrições definem certos limites para alguns campos/colunas/atributos. Podemos utilizá-las junto com a instrução <span>CREATE TABLE</span> ou com <span>ALTER TABLE</span>. Elas estabelecem regras específicas para os dados da tabela. A sintaxe de uma restrição é:
+                            <p>Anteriormente, já foi demonstrada a utilização das restrições NOT NULL, UNIQUE, PRIMARY KEY e FOREIGN KEY. A restrição CHECK realiza uma verificação para determinados valores, ou seja, o CHECK limita os valores que determinado atributo pode receber. Sua sintaxe é a seguinte:
                             </p>
-                            <code><span>CREATE TABLE </span>nomeTabela(</code><br>
-                            <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em>,</code><br>
-                            <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em></code><br>
-                            <code>);</code>
-            
+                            <code><span>CHECK </span>(condição)</code>
                         </div>
                         <div class="code">
                             <code>
-                                <p>São exemplos de Constraint:</p>
-                                <code><span>NOT NULL</span></code><br>
-                                <code><span>UNIQUE</span></code><br>
-                                <code><span>PRIMARY KEY</span></code><br>
-                                <code><span>FOREIGN KEY</span></code><br>
-                                <code><span>CHECK</span></code><br>
-                                <code><span>DEFAULT</span></code><br>
-                                <code><span>CREATE INDEX</span></code><br>
+                                <p>Os tipos de operações que podemos realizar em "condição" são:</p>
+                                <code><span> = </span>Igual a</code><br>
+                                <code><span> > </span>Maior que</code><br>
+                                <code><span> < </span>Menor que</code><br>
+                                <code><span> >= </span>Maior ou igual a</code><br>
+                                <code><span> <= </span>Menor ou igual a</code><br>
+                                <code><span> <> </span>Diferente de</code><br>
                             </code>
+                        </div>
+                        <p>Ou seja, podemos determinar que determinado atributo somente será gravado no banco de dados se o valor for maior que, maior ou igual a, menor que, menor ou igual a, ou diferente de determinado número, ou data/hora. Podemos utilizar os operadores de igualdade e diferença para checar textos.
+                        </p>
+                        <div class="code">
+                            <code>
+                                <p>Exemplos de utilização na hora de criar uma tabela:</p>
+                                <code><span>CREATE TABLE</span> Aluno( </code> <br>
+                                    <code style="padding-left: 20px;">aluno_id <span>INT(4) NOT NULL AUTO_INCREMENT</span>,</code> <br>
+                                    <code style="padding-left: 20px;">idade <span>INT(3) NOT NULL</span> <em>CHECK(</em>idade > 0<em>)</em>,</code><br>
+                                    <code style="padding-left: 20px;">nota <span>FLOAT NOT NULL</span> <em>CHECK(</em>nota <= 10<em>)</em>,</code><br>
+                                    <code style="padding-left: 20px;">data_nascimento<span> DATE NOT NULL </span> <em>CHECK(</em>data_nascimento <= '2023-07-25'<em>)</em>,</code><br>
+                                    <code style="padding-left: 20px;">nome<span> VARCHAR(100) NOT NULL </span><em>CHECK(</em>nome <> 'Uianes'<em>)</em>,</code><br>
+                                    <code style="padding-left: 20px;"><span> PRIMARY KEY</span>(aluno_id)</code> <br>
+                                <code>);</code>
+                            </code>
+                        </div>
+                        <div class="code">
+                            <p>E para adicionar uma verificação em uma tabela já existe:</p>
+                            <code><span>ALTER TABLE</span> nomeTabela</code><br>
+                            <code>ADD <em>CONSTRAINT</em> nomeCheck <em>CHECK</em>(atributo <span>operador</span> valor);</code>
+                            <p>Exemplo:</p>
+                            <code><span>ALTER TABLE</span> Aluno</code><br>
+                            <code>ADD <em>CONSTRAINT</em> testeIdade <em>CHECK</em>(idade >= 1);</code>
+                        </div>
+                        <div class="code">
+                            <p>E para adicionar várias restrições em uma tabela já existe:</p>
+                            <code><span>ALTER TABLE</span> nomeTabela</code><br>
+                            <code>ADD <em>CONSTRAINT</em> checkNome <em>CHECK</em>(atributo1 operador valor1 <span>AND</span> atributo2 operador valor2);</code>
+                            <p>Utilizamos "AND" para unir diferentes condições. Há uma parte específica mais adiante para falar sobre AND, OR e NOT.</p>
+                        </div>
+                        <div class="code">
+                            <p>Para apagar uma limitação é necessário que a restrição seja declarada através de CONSTRAINT com nome próprio, mesmo que seja somente para um atributo. Exemplo de criação:
+                            </p>
+                            <code><span>ALTER TABLE</span> nomeTabela</code><br>
+                            <code>ADD <em>CONSTRAINT</em> checkNome <em>CHECK</em>(atributo1 operador valor1);</code>
+                        </div>
+                        <div class="code">
+                            <p>E para apagar:</p>
+                            <code><span>ALTER TABLE</span> nomeTabela</code><br>
+                            <code>DROP <em>CONSTRAINT</em> checkNome;</code>
                         </div>
                     </article>
                     <div vw class="enabled">
