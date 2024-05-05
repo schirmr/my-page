@@ -970,7 +970,7 @@ a.pure-button-selected {
 
 .pure-menu-horizontal .pure-menu-children .pure-menu-separator,
 .pure-menu-separator {
-    background-color: #ccc;
+    background-color: #ffffff;
     height: 1px;
     margin: .3em 0
 }
@@ -988,11 +988,11 @@ a.pure-button-selected {
 
 .pure-menu-heading {
     text-transform: uppercase;
-    color: #565d64
+    color: #000000
 }
 
 .pure-menu-link {
-    color: #777
+    color: #ffffff
 }
 
 .pure-menu-children {

@@ -1,41 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ELECBRA</title>
     <link rel="icon" type="image/png" href="../assets/icons/icon.png">
     <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/pure-min.css">
+    <link rel="stylesheet" href="../assets/styles/sidemenu.css">
+    <script src="../scripts/carregarMenu.js"></script>
 </head>
 
 <body>
-    <nav>
-        <progress value="30" max="100"></progress>
-    </nav>
-    <main class="container">
-        <aside>
-            <div><a href="index.html"> Início </a></div>
-            <hr>
-            <div> Menu: </div>
-            <div id="zoom+"> + </div>
-            <div id="zoom-"> - </div>
-            <div><a href="" id="ant">&lt;</a></div>
-            <div><a href="" id="prox">&gt;</a></div>
-            <hr>
-            <div id="imprimir">Imprimir</div>
-            <div id="pdf">PDF</div>
-            <div id="pptx">Gerar <br> Apresentação</div>
-            <div id="darkmode">Alto<br>Contraste</div>
-            <hr>
-            <div id="ouvir">Ouvir o texto</div>
-            <div id="pausar">Pausar</div>
-            <div id="retomar">Retomar</div>
-            <div id="velocidademais">Aumentar a velocidade</div>
-            <div id="velocidademenos">Diminuir a velocidade</div>
-            <div id="volumemais">Aumentar o volume</div>
-            <div id="volumemenos">Diminuir o volume</div>
-        </aside>
+    <div id="layout">
+        <div id="menu-placeholder"></div>
+
+        <div id="main">
+            <progress value="30" max="100"></progress>
+            <div class="pure-g">
+                <div class="content">
         <article id="texto">
             <h2>15. Restrições (CONSTRAINT)</h2>
             <div id="autor">
@@ -45,8 +28,8 @@
                 <p>As restrições definem certos limites para alguns campos/colunas/atributos. Podemos utilizá-las junto com a instrução <span>CREATE TABLE</span> ou com <span>ALTER TABLE</span>. Elas estabelecem regras específicas para os dados da tabela. A sintaxe de uma restrição é:
                 </p>
                 <code><span>CREATE TABLE </span>nomeTabela(</code><br>
-                <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em>,</code>
-                <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em></code>
+                <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em>,</code><br>
+                <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em></code><br>
                 <code>);</code>
 
             </div>
@@ -63,7 +46,10 @@
                 </code>
             </div>
         </article>
-    </main>
+    </div>
+</div>
+</div>
+</div>
     <script src="../scripts/html2pdf.bundle.min.js"></script>
     <script src="../scripts/pptxgen.bundle.js"></script>
     <script src="../scripts/nav.js"></script>
@@ -74,6 +60,7 @@
     <script src="../scripts/darkmode.js"></script>
     <script src="../scripts/som.js"></script>
     <script src="../scripts/pptx.js"></script>
+    <script src="../scripts/ui.js"></script>
 </body>
 
 </html>

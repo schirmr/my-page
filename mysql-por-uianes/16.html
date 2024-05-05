@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/pure-min.css">
+    <link rel="stylesheet" href="../assets/styles/sidemenu.css">
+    <script src="../scripts/carregarMenu.js"></script>
+</head>
+<body>
+    <div id="layout">
+        <div id="menu-placeholder"></div>
+
+        <div id="main">
+            <progress value="32" max="100"></progress>
+            <div class="pure-g">
+                <div class="content">
+                    <article id="texto">
+                        <h2>15. Restrições (CONSTRAINT)</h2>
+                        <div id="autor">
+                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+                        </div>
+                        <div class="code">
+                            <p>As restrições definem certos limites para alguns campos/colunas/atributos. Podemos utilizá-las junto com a instrução <span>CREATE TABLE</span> ou com <span>ALTER TABLE</span>. Elas estabelecem regras específicas para os dados da tabela. A sintaxe de uma restrição é:
+                            </p>
+                            <code><span>CREATE TABLE </span>nomeTabela(</code><br>
+                            <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em>,</code><br>
+                            <code style="padding-left: 20px;">nomeAtributo <span>Tipo(tamanho)</span><em> CONSTRAINT</em></code><br>
+                            <code>);</code>
+            
+                        </div>
+                        <div class="code">
+                            <code>
+                                <p>São exemplos de Constraint:</p>
+                                <code><span>NOT NULL</span></code><br>
+                                <code><span>UNIQUE</span></code><br>
+                                <code><span>PRIMARY KEY</span></code><br>
+                                <code><span>FOREIGN KEY</span></code><br>
+                                <code><span>CHECK</span></code><br>
+                                <code><span>DEFAULT</span></code><br>
+                                <code><span>CREATE INDEX</span></code><br>
+                            </code>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
+    <script src="../scripts/nav.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
+    <script src="../scripts/ui.js"></script>
+</body>
+</html>

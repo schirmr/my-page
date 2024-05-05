@@ -5,6 +5,7 @@ utterance.rate = 1;
 utterance.volume = 1;
 
 document.getElementById("ouvir").addEventListener("click", function () {
+    window.speechSynthesis.cancel()
     window.speechSynthesis.speak(utterance);
 })
 
