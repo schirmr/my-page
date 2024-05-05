@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/styles/pure-min.css">
     <link rel="stylesheet" href="../assets/styles/sidemenu.css">
-    <script src="../scripts/carregarMenu.js"></script>
     <script src="../scripts/nav.js"></script>
 </head>
 
@@ -86,6 +85,16 @@
             <p><span id="alerta">Cuidado!</span> Ao inserir um valor em uma tabela, nas colunas (atributos) que possuem a propriedade "auto_increment", NÃO devemos adicionar um valor manualmente, pois o SGBD fará isso automaticamente. Esse assunto será melhor abordado nas anotações sobre o comando <span id="alerta">INSERT INTO</span>.
             </p>
         </article>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </div>
 </div>
 </div>

@@ -8,13 +8,11 @@
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/styles/pure-min.css">
     <link rel="stylesheet" href="../assets/styles/sidemenu.css">
-    <script src="../scripts/carregarMenu.js"></script>
     <script src="../scripts/nav.js"></script>
 </head>
 <body>
     <div id="layout">
         <div id="menu-placeholder"></div>
-
         <div id="main">
             <progress value="2" max="100"></progress>
             <div class="pure-g">
@@ -71,6 +69,16 @@
                 Em aula, considerando a duração do semestre, geralmente estudamos os subconjuntos DDL, DQL e DML.
             </p>
         </article>
+        <div vw class="enabled">
+            <div vw-access-button class="active"></div>
+            <div vw-plugin-wrapper>
+                <div class="vw-plugin-top-wrapper"></div>
+            </div>
+        </div>
+        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+        <script>
+            new window.VLibras.Widget('https://vlibras.gov.br/app');
+        </script>
     </div>
 </div>
 </div>

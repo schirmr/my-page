@@ -1,13 +1,14 @@
-var zoomMaisDiv = document.getElementById("zoom+")
-
+var zoomMaisDiv = document.getElementById("zoom+");
 
 zoomMaisDiv.addEventListener("click", function () {
-
-    var elementos = document.querySelectorAll("p, code, li, h2, table, small, em")
-
+    var elementos = document.querySelectorAll("p, code, li, h2, table, small, em");
 
     elementos.forEach(function (elemento) {
-        var tamanhoFonteAtual = parseInt(window.getComputedStyle(elemento).fontSize)
-        elemento.style.fontSize = (tamanhoFonteAtual * 1.2) + "px" // Aumenta em 20%
+        var tamanhoFonteAtual = parseInt(window.getComputedStyle(elemento).fontSize);
+        var novoTamanhoFonte = tamanhoFonteAtual * 1.2; // Aumenta em 20%
+        var novaAlturaLinha = novoTamanhoFonte * 1.4; 
+
+        elemento.style.fontSize = novoTamanhoFonte + "px";
+        elemento.style.lineHeight = novaAlturaLinha + "px";
     });
 });

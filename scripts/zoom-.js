@@ -8,6 +8,10 @@ zoomMenosDiv.addEventListener("click", function () {
 
     elementos.forEach(function (elemento) {
         var tamanhoFonteAtual = parseInt(window.getComputedStyle(elemento).fontSize)
-        elemento.style.fontSize = (tamanhoFonteAtual * 0.8) + "px" // Diminui em 20%
+        var novoTamanhoFonte = tamanhoFonteAtual * 0.8; // Diminui em 20%
+        var novaAlturaLinha = novoTamanhoFonte * 1.2; 
+
+        elemento.style.fontSize = novoTamanhoFonte + "px";
+        elemento.style.lineHeight = novaAlturaLinha + "px"; 
     });
 });

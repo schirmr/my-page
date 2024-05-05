@@ -18,12 +18,12 @@ Funcionalidades atuais:
 - [ ] Adicionar simulados para cada capítulo.
 - [ ] Adicionar simulador para testar os comandos do capítulo.
 - [x] Adicionar botão para modo de alto contraste (Dark).
-- [ ] Testar botão de alto contraste em vários contextos.
+- [x] Testar botão de alto contraste em vários contextos.
 - [x] Quando a página está em modo dark, é necessário retornar ao modo light para gerar o PDF, caso contrário o PDF estará ilegível. Adicionar script ao pdf.js para corrigir isso.
 - [ ] Adcionar botão para mudar o idioma do texto.
 - [ ] Adicionar botão para modo daltônio, alterando o padrão de cores.
 - [ ] Adicionar navegação por teclado.
-- [ ] Adicionar botão de áudio para reproduzir a leitura da página via leitor.
+- [x] Adicionar botão de áudio para reproduzir a leitura da página via leitor.
 - [ ] Adicionar integração com o V-LIBRAS, se possível.
 - [x] Adicionar integração para o navegador ler a página, pensei na SpeechSynthesis
 - [x] Adicionar controles para aumentar velocidade
