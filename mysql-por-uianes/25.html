@@ -43,25 +43,20 @@
         </div>
 
         <div id="main">
-            <progress value="44" max="100"></progress>
+            <progress value="50" max="100"></progress>
             <div class="pure-g">
                 <div class="content">
                     <article id="texto">
-                        <h2>22. WHERE</h2>
+                        <h2>25. NULL VALUES</h2>
                         <div id="autor">
-                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 11 mai. 2024</small>
                         </div>
                         <div class="code">
-                            <p>A cláusula WHERE é usada para definir condições, utilizamos WHERE junto com os comandos SELECT, UPDATE, DELETE, entre outros. Sintaxe:
+                            <p>Como dito anteriormente, nunca um registro do banco de dados permanecerá vazio (em branco). Quando for possível, o SGBD fará a inserção do valor NULL automaticamente. Também é possível realizar essa inserção manualmente através do comando INSERT INTO.
                             </p>
-                            <code><span>SELECT </span> coluna1, coluna2, ...</code><br>
-                            <code><span>FROM</span> nomeTabela</code><br>
-                            <code><span>WHERE</span> condição;</code><br>
-                        </div>
-                        <div class="code">
-                            <p>Os operadores que podemos usar com o WHERE, são:</p>
-                            <p>=, >, <, >=, <=, <>, BETWEEN, LIKE, IN.</p>
-                            <p>Exemplos:</p>
+                            <code><span>INSERT INTO </span> Alunos(nome_aluno, cidade_aluno, bairro_aluno)</code><br>
+                            <code><span>VALUES</span> (NULL, NULL, NULL);</code><br>
+                            <p>Perceba que "NULL" e NULL são coisas diferentes. "NULL" é um texto com a palavra "NULL". E NULL é um valor nulo. Portanto, para inserir um valor nulo, usamos NULL sem aspas. Resultado:</p>
                             <p><b>Tabela Alunos</b></p>
                             <table id="table">
                                 <tbody>
@@ -69,39 +64,63 @@
                                         <td>id_aluno</td>
                                         <td>nome_aluno</td>
                                         <td>cidade_aluno</td>
+                                        <td>bairro_aluno</td>
                                     </tr>
                                     <tr>
                                         <td>1</td>
                                         <td>Uianes</td>
                                         <td>Santo Augusto</td>
+                                        <td>São Francisco</td>
                                     </tr>
                                     <tr>
                                         <td>2</td>
                                         <td>Maria</td>
                                         <td>Três Passos</td>
+                                        <td>Pindorama</td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
                                         <td>José</td>
                                         <td>Santo Augusto</td>
+                                        <td>São Francisco</td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
                                         <td>Antônio</td>
                                         <td>Santo Augusto</td>
+                                        <td>Glória</td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
                                         <td>João</td>
                                         <td>Tenente Portela</td>
+                                        <td>Centro</td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
+                                        <td>NULL</td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>Caso você queira mostrar o nome da pessoa que vive em Três Passos, basta utilizar o seguinte comando:
+                        </div>
+                        <div class="code">
+                            <p>Após esse contexto, podemos filtrar valores nulos e não nulos em um SELECT.
                             </p>
-                            <code><span>SELECT</span> nome_aluno</code><br>
-                            <code><span>FROM</span> Alunos</code><br>
-                            <code><span>WHERE</span> cidade_aluno = "Três Passos";</code>
+                            <code><span>IS NULL</span></code>
+                            <p>Retorna valores nulos. E:</p>
+                            <code><span>IS NOT NULL</span></code>
+                            <p>Retorna valores não nulos.</p>
+                        </div>
+                        <div class="code">
+                            <p>Exemplo:</p>
+                            <code><span>SELECT </span> * <span>FROM</span> Alunos</code><br>
+                            <code><span>WHERE</span> cidade_aluno <em>IS NULL</em>;</code><br>
+                            <p>Retornará todas as informações sobre o aluno que tiver a cidade como Null. Outro exemplo:
+                            </p>
+                            <code><span>SELECT </span> * <span>FROM</span> Alunos</code><br>
+                            <code><span>WHERE</span> cidade_aluno <em>IS NOT NULL</em>;</code><br>
                         </div>
                     </article>
                     <div vw class="enabled">

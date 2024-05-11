@@ -43,65 +43,54 @@
         </div>
 
         <div id="main">
-            <progress value="44" max="100"></progress>
+            <progress value="54" max="100"></progress>
             <div class="pure-g">
                 <div class="content">
                     <article id="texto">
-                        <h2>22. WHERE</h2>
+                        <h2>27. MIN e MAX</h2>
                         <div id="autor">
                             <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
                         </div>
+                        <p>As funções MIN e MAX servem para retornar, respectivamente, o menor e o maior valor de uma coluna. Considere a seguinte tabela de exemplo:</p>
+                        <p><b>Tabela Produto</b></p>
+                        <table id="table">
+                            <tbody>
+                                <tr>
+                                    <td>id_produto</td>
+                                    <td>nome_produto</td>
+                                    <td>preço_produto</td>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Caneta</td>
+                                    <td>5.00</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Caderno</td>
+                                    <td>18.00</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Borracha</td>
+                                    <td>3.00</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Lápis</td>
+                                    <td>1.50</td>
+                                </tr>
+                            </tbody>
+                        </table>
                         <div class="code">
-                            <p>A cláusula WHERE é usada para definir condições, utilizamos WHERE junto com os comandos SELECT, UPDATE, DELETE, entre outros. Sintaxe:
-                            </p>
-                            <code><span>SELECT </span> coluna1, coluna2, ...</code><br>
-                            <code><span>FROM</span> nomeTabela</code><br>
-                            <code><span>WHERE</span> condição;</code><br>
+                            <p>Para verificar o menor preço da tabela:</p>
+                            <code><span>SELECT </span> <em>MIN</em>(preço_produto)</code><br>
+                            <code><span>FROM</span> Produto;</code><br>
                         </div>
                         <div class="code">
-                            <p>Os operadores que podemos usar com o WHERE, são:</p>
-                            <p>=, >, <, >=, <=, <>, BETWEEN, LIKE, IN.</p>
-                            <p>Exemplos:</p>
-                            <p><b>Tabela Alunos</b></p>
-                            <table id="table">
-                                <tbody>
-                                    <tr>
-                                        <td>id_aluno</td>
-                                        <td>nome_aluno</td>
-                                        <td>cidade_aluno</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Uianes</td>
-                                        <td>Santo Augusto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Maria</td>
-                                        <td>Três Passos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>José</td>
-                                        <td>Santo Augusto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Antônio</td>
-                                        <td>Santo Augusto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>João</td>
-                                        <td>Tenente Portela</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p>Caso você queira mostrar o nome da pessoa que vive em Três Passos, basta utilizar o seguinte comando:
-                            </p>
-                            <code><span>SELECT</span> nome_aluno</code><br>
-                            <code><span>FROM</span> Alunos</code><br>
-                            <code><span>WHERE</span> cidade_aluno = "Três Passos";</code>
+                            <p>Para verificar o maior preço da tabela:</p>
+                            <code><span>SELECT </span> <em>MAX</em>(preço_produto)</code><br>
+                            <code><span>FROM</span> Produto;</code><br>
                         </div>
                     </article>
                     <div vw class="enabled">

@@ -43,97 +43,27 @@
         </div>
 
         <div id="main">
-            <progress value="36" max="100"></progress>
+            <progress value="48" max="100"></progress>
             <div class="pure-g">
                 <div class="content">
                     <article id="texto">
-                        <h2>18. Atualizar valores gravados (UPDATE)</h2>
+                        <h2>24. ORDER BY</h2>
                         <div id="autor">
-                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 11 mai. 2024</small>
                         </div>
+                        <p>A instrução ORDER BY é usada para ordenar os resultados de uma consulta SQL. Por padrão, o ORDER BY retornará os resultados em ordem crescente (ascendente). No entanto, é possível inverter a ordem e obter os resultados em ordem descendente. A sintaxe é a seguinte:
+                        </p>
                         <div class="code">
-                            <p>UPDATE é a instrução utilizada para atualizar ou modificar um valor já registrado. Por exemplo, se você cadastrou um nome e percebeu que ele foi digitado errado, é possível resolver o problema utilizando o comando UPDATE. Sintaxe:
-                            </p>
-                            <code><span>UPDATE</span> nomeTabela</code><br>
-                            <code><span>SET</span> coluna1 = valor1, coluna2 = valor2, ...</code><br>
-                            <code><span>WHERE</span> condição;</code>
-                            <p><span>CUIADO!</span> O uso do WHERE é fortemente recomendado. Caso você execute o comando sem WHERE, todos os registros da sua tabela serão modificados.
-                            </p>
-                        </div>
-                        <div class="code">
-                            <p>Considerando uma tabela com alunos cadastrados, com a coluna id_aluno e nome_aluno, observe:</p>
-                            <p>Tabela "Alunos" antes do comando:</p>
+                            <code><span>SELECT </span> coluna1, coluna2, ...</code><br>
+                            <code><span>FROM</span> nomeTabela</code><br>
+                            <code><span>ORDER BY</span> coluna1 <em>ASC | DESC</em>;</code><br>
+                            <p>Exemplo:</p>
                             <p><b>Tabela Alunos</b></p>
                             <table id="table">
                                 <tbody>
                                     <tr>
                                         <td>id_aluno</td>
                                         <td>nome_aluno</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Vianes</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Maria</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>José</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Antônio</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>João</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <p>Para alterar o nome do aluno com ID 01:</p>
-                            <code><span>UPDATE</span> Alunos</code><br>
-                            <code><span>SET</span> nome_aluno = "Uianes"</code><br>
-                            <code><span>WHERE</span> id_aluno = 1;</code>
-                            <p>Tabela "Alunos" após o comando:</p>
-                            <table id="table">
-                                <tbody>
-                                    <tr>
-                                        <td>id_aluno</td>
-                                        <td>nome_aluno</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Uianes</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Maria</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>José</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Antônio</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>João</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="code">
-                            <p>Para alterar duas colunas ou mais:</p>
-                            <p>Antes:</p>
-                            <table id="table">
-                                <tbody>
-                                    <tr>
-                                        <td>id_aluno</td>
-                                        <td>nome_aluno</td>
                                         <td>cidade_aluno</td>
                                     </tr>
                                     <tr>
@@ -149,7 +79,7 @@
                                     <tr>
                                         <td>3</td>
                                         <td>José</td>
-                                        <td>Crissiumal</td>
+                                        <td>Santo Augusto</td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
@@ -163,95 +93,68 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <p>Comando:</p>
-                            <code><span>UPDATE</span> Alunos</code><br>
-                            <code><span>SET</span> nome_aluno = "Uianes", cidade_aluno = "Crissiumal"</code><br>
-                            <code><span>WHERE</span> id_aluno = 1;</code>
-                            <p>Depois:</p>
-                            <table id="table">
-                                <tbody>
-                                    <tr>
-                                        <td>id_aluno</td>
-                                        <td>nome_aluno</td>
-                                        <td>cidade_aluno</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Uianes</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Maria</td>
-                                        <td>Três Passos</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>José</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Antônio</td>
-                                        <td>Santo Augusto</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>João</td>
-                                        <td>Tenente Portela</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="code">
-                            <p>Se você executar o comando sem WHERE:</p>
-                            <code><span>UPDATE</span> Alunos</code><br>
-                            <code><span>SET</span> nome_aluno = "Uianes", cidade_aluno = "Crissiumal";</code><br>
-                            <p>Depois:</p>
-                            <table id="table">
-                                <tbody>
-                                    <tr>
-                                        <td>id_aluno</td>
-                                        <td>nome_aluno</td>
-                                        <td>cidade_aluno</td>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>Uianes</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>Uianes</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>Uianes</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>4</td>
-                                        <td>Uianes</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                    <tr>
-                                        <td>5</td>
-                                        <td>Uianes</td>
-                                        <td>Crissiumal</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="code">
-                            <p>Na condição, do WHERE, podemos adicionar outras colunas da tabela, em vez de somente a PK (id), imagine, por exemplo, que você deseja trocar a palavra "Crissiumal" por "Santo Augusto" em todos os registros da tela, o comando ficaria assim:</p>
-                            <code><span>UPDATE</span> Alunos</code><br>
-                            <code><span>SET</span> cidade_aluno = "Santo Augusto"</code><br>
-                            <code><span>WHERE</span> cidade_aluno = "Crissiumal";</code>
+                            <code><span>SELECT </span> nome_aluno, cidade_aluno</code><br>
+                            <code><span>FROM</span> Alunos</code><br>
+                            <code><span>ORDER BY</span> nome_aluno <em>ASC</em>;</code><br>
                             <p>Resultado:</p>
                             <table id="table">
                                 <tbody>
                                     <tr>
+                                        <td>nome_aluno</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Antônio</td>
+                                    </tr>
+                                    <tr>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>José</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maria</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uianes</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code">
+                            <p>Perceba que os nomes agora estão organizados em ordem alfabética ascendente. Caso o comando recebesse DESC, a ordem seria invertida.</p>
+                            <code><span>SELECT </span> nome_aluno, cidade_aluno</code><br>
+                            <code><span>FROM</span> Alunos</code><br>
+                            <code><span>ORDER BY</span> nome_aluno <em>DESC</em>;</code><br>
+                            <p>Resultado:</p>
+                            <table id="table">
+                                <tbody>
+                                    <tr>
+                                        <td>nome_aluno</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Uianes</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maria</td>
+                                    </tr>
+                                    <tr>
+                                        <td>José</td>
+                                    </tr>
+                                    <tr>
+                                        <td>João</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Antônio</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="code">
+                            <p>Ordenação múltipla: É possível ordenar valores através de duas ou mais colunas. Por exemplo, se existem 3 pessoas de "Santo Augusto", caso você deseje ordenar os alunos pela cidade, é possível fazer uma nova ordenação para que as pessoas da mesma cidade apareçam em ordem ascendente ou descendente.</p>
+                            <p><b>Tabela Alunos</b></p>
+                            <table id="table">
+                                <tbody>
+                                    <tr>
                                         <td>id_aluno</td>
                                         <td>nome_aluno</td>
                                         <td>cidade_aluno</td>
@@ -282,7 +185,47 @@
                                         <td>Tenente Portela</td>
                                     </tr>
                                 </tbody>
+                                <code><span>SELECT </span> nome_aluno, cidade_aluno</code><br>
+                                <code><span>FROM</span> Alunos</code><br>
+                                <code><span>ORDER BY</span> cidade_aluno, nome_aluno <em>ASC</em>;</code><br>
+                                <p>Resultado:</p>
+                                <table id="table">
+                                    <tbody>
+                                        <tr>
+                                            <td>nome_aluno</td>
+                                            <td>cidade_aluno</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Antônio</td>
+                                            <td>Santo Augusto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>José</td>
+                                            <td>Santo Augusto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Uianes</td>
+                                            <td>Santo Augusto</td>
+                                        </tr>
+                                        <tr>
+                                            <td>João</td>
+                                            <td>Tenente Portela</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Maria</td>
+                                            <td>Três Passos</td>
+                                        </tr>
+                                    </tbody>
                             </table>
+                        </div>
+                        <div class="code">
+                            <p>Observação: Caso você utilize ORDER BY junto com WHERE, a cláusula WHERE deve aparecer primeiro.
+                            </p>
+                            <p>Sintaxe:</p>
+                            <code><span>SELECT </span> coluna1, coluna2, ...</code><br>
+                            <code><span>FROM</span> nomeTabela</code><br>
+                            <code><span>WHERE</span> condição</code><br>
+                            <code><span>ORDER BY</span> colunaX <em>ASC | DESC</em>;</code><br>
                         </div>
                     </article>
                     <div vw class="enabled">
