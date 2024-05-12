@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/pure-min.css">
+    <link rel="stylesheet" href="../assets/styles/sidemenu.css">
+</head>
+<body>
+    <div id="layout">
+        <div id="menu">
+            <a href="#menu" id="menuLink" class="menu-link">
+                <span></span>
+            </a>
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="index.html">Início</a>
+        
+                <ul class="pure-menu-list" style="text-align: center;">
+                    <div class="pure-menu-item menu-item-divided" style="padding: 10px; color: white;">Menu:</div>
+        
+                    <div id="zoom+" class="pure-menu-link">+</div>
+                    <div id="zoom-" class="pure-menu-link">-</div>
+                    <div class="pure-menu-link"><a href="" id="ant">&lt;</a></div>
+                    <div class="pure-menu-link"><a href="" id="prox">&gt;</a></div>
+                    <hr>
+                    <div class="pure-menu-link" id="imprimir">Imprimir</div>
+                    <div class="pure-menu-link" id="pdf">PDF</div>
+                    <div class="pure-menu-link" id="pptx">Gerar <br> Apresentação</div>
+                    <div class="pure-menu-link" id="darkmode">Alto<br>Contraste</div>
+                    <hr>
+                    <div class="pure-menu-link" id="ouvir">Ouvir o texto</div>
+                    <div class="pure-menu-link" id="pausar">Pausar</div>
+                    <div class="pure-menu-link" id="retomar">Retomar</div>
+                    <div class="pure-menu-link" id="velocidademais">Aumentar a <br> velocidade</div>
+                    <div class="pure-menu-link" id="velocidademenos">Diminuir a <br> velocidade</div>
+                    <div class="pure-menu-link" id="volumemais">Aumentar o <br> volume</div>
+                    <div class="pure-menu-link" id="volumemenos">Diminuir o <br> volume</div>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <progress value="58" max="100"></progress>
+            <div class="pure-g">
+                <div class="content">
+                    <article id="texto">
+                        <h2>29. LIKE e Wildcards</h2>
+                        <div id="autor">
+                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+                        </div>
+                        <p>O operador LIKE é utilizado em conjunto com a cláusula Wildcards. Ambas instruções são utilizadas junto com o WHERE.
+                        </p>
+                        <p>Quando utilizamos a seguinte sintaxe: WHERE cidade_aluno = "Santo Augusto", estamos definindo que somente os valores iguais a "Santo Augusto" serão retornados. E assim surge uma questão: E se você quiser somente as cidades que tenham a letra "s" no nome?
+                        </p>
+                        <p>Para fazer essa busca específica, podemos utilizar o operador LIKE e um Wildcard.
+                        </p>
+                        <p>Wildcards são representados por dois caracteres especiais: "%" e "_".
+                        </p>
+                        <ul>
+                            <li>O símbolo "%" representa 0, 1 ou muitos caracteres textuais ou numéricos.
+                            </li>
+                            <li>
+                                O símbolo "_" representa exatamente 1 caractere, podendo ser qualquer caractere textual ou numérico.
+                            </li>
+                        </ul>
+                        <p>Esses wildcards são usados em conjunto com o operador LIKE para criar padrões de busca mais abrangentes e flexíveis em consultas SQL.
+                        </p>
+                        <div class="code">
+                            <p>Sintaxe:</p>
+                            <code><span>SELECT</span> coluna1, coluna2, ...</code><br>
+                            <code><span>FROM</span> nomeTabela</code><br>
+                            <code><span>WHERE</span> coluna <em>LIKE</em> padrão;</code><br>
+                            <p>Para selecionar somente cidades com "s" no nome, por exemplo:</p>
+                            <p><b>Tabela Alunos</b></p>
+                            <table id="table">
+                                <tbody>
+                                    <tr>
+                                        <td>id_aluno</td>
+                                        <td>nome_aluno</td>
+                                        <td>cidade_aluno</td>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Uianes</td>
+                                        <td>Santo Augusto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Maria</td>
+                                        <td>Três Passos</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>José</td>
+                                        <td>Santo Augusto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Antônio</td>
+                                        <td>Santo Augusto</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>João</td>
+                                        <td>Tenente Portela</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <code><span>SELECT </span>cidade_aluno</code><br>
+                            <code><span>FROM</span> Alunos</code><br>
+                            <code><span>WHERE</span> cidade_aluno <em>LIKE</em> '%s%';</code><br>
+                        </div>
+                        <p>Tipos de padrões:</p>
+                        <ul>
+                            <li>WHERE cidade_aluno <em>LIKE 's%':</em> Vai mostrar qualquer valor que comece com "s".</li>
+                            <li>WHERE cidade_aluno <em>LIKE '%s':</em> Vai mostrar qualquer valor que termine com "s".</li>
+                            <li>WHERE cidade_aluno <em>LIKE '%s%':</em> Vai mostrar qualquer valor que tenha "s" em qualquer lugar.</li>
+                            <li>WHERE cidade_aluno <em>LIKE '_s%':</em> Vai mostrar qualquer valor que tenha a letra "s" como segunda letra da palavra ou frase.</li>
+                            <li>WHERE cidade_aluno <em>LIKE 's_%':</em> Vai mostrar qualquer valor que comece com "s" e que tenha pelo menos 2 caracteres de comprimento.</li>
+                            <li>WHERE cidade_aluno <em>LIKE 's__%':</em> Vai mostrar qualquer valor que comece com "s" e que tenha pelo menos 3 caracteres de comprimento.</li>
+                            <li>WHERE cidade_aluno <em>LIKE 's_n_o%':</em> Vai mostrar qualquer valor que comece com "s", tenha um caractere qualquer, seguido de "n", após um caractere qualquer e que termine com "o".</li>
+                            <li>WHERE cidade_aluno <em>LIKE 's%o':</em> Vai mostrar qualquer valor que comece com "s" e termine com "o".</li>
+                        </ul>
+                        <p>É possível combinar o operador LIKE com NOT.</p>
+                        <div class="code">
+                            <p>Para demonstrar todos os valores que NÃO tenham um "s":
+                            </p>
+                            <code><span>SELECT</span> cidade_aluno</code><br>
+                            <code><span>FROM</span> Alunos</code><br>
+                            <code><span>WHERE</span> cidade_aluno <em>NOT LIKE</em> '%s%';</code><br>
+                        </div>
+                    </article>
+                    <div vw class="enabled">
+                        <div vw-access-button class="active"></div>
+                        <div vw-plugin-wrapper>
+                          <div class="vw-plugin-top-wrapper"></div>
+                        </div>
+                      </div>
+                      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+                      <script>
+                        new window.VLibras.Widget('https://vlibras.gov.br/app');
+                      </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
+    <script src="../scripts/ui.js"></script>
+    <script src="../scripts/nav.js"></script>
+</body>
+</html>
