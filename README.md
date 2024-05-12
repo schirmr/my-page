@@ -36,3 +36,4 @@ Funcionalidades atuais:
 - [x] Adicionar botão para gerar .pptx, pesquisei para ser .odt mas não achei uma biblioteca para isso. O slide gerado vai requerer ajustes do usuário, pois não fica perfeito, mas adianta boa parte do trabalho.
 - [ ] Para que o slide receba cor, é necessário adidcionar um css inline, talvez dê para fazer algo desse tipo no pptx.js adicionando no elemento.
 - [ ] Refazer o menu, pois no Safari é necessário "descer a página" para ele aparecer no celular.
+- [ ] Quando copiar algo do texto, ir formatado com referência ABNT.

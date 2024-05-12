@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECBRA</title>
+    <link rel="icon" type="image/png" href="../assets/icons/icon.png">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="../assets/styles/pure-min.css">
+    <link rel="stylesheet" href="../assets/styles/sidemenu.css">
+</head>
+<body>
+    <div id="layout">
+        <div id="menu">
+            <a href="#menu" id="menuLink" class="menu-link">
+                <span></span>
+            </a>
+            <div class="pure-menu">
+                <a class="pure-menu-heading" href="index.html">Início</a>
+        
+                <ul class="pure-menu-list" style="text-align: center;">
+                    <div class="pure-menu-item menu-item-divided" style="padding: 10px; color: white;">Menu:</div>
+        
+                    <div id="zoom+" class="pure-menu-link">+</div>
+                    <div id="zoom-" class="pure-menu-link">-</div>
+                    <div class="pure-menu-link"><a href="" id="ant">&lt;</a></div>
+                    <div class="pure-menu-link"><a href="" id="prox">&gt;</a></div>
+                    <hr>
+                    <div class="pure-menu-link" id="imprimir">Imprimir</div>
+                    <div class="pure-menu-link" id="pdf">PDF</div>
+                    <div class="pure-menu-link" id="pptx">Gerar <br> Apresentação</div>
+                    <div class="pure-menu-link" id="darkmode">Alto<br>Contraste</div>
+                    <hr>
+                    <div class="pure-menu-link" id="ouvir">Ouvir o texto</div>
+                    <div class="pure-menu-link" id="pausar">Pausar</div>
+                    <div class="pure-menu-link" id="retomar">Retomar</div>
+                    <div class="pure-menu-link" id="velocidademais">Aumentar a <br> velocidade</div>
+                    <div class="pure-menu-link" id="velocidademenos">Diminuir a <br> velocidade</div>
+                    <div class="pure-menu-link" id="volumemais">Aumentar o <br> volume</div>
+                    <div class="pure-menu-link" id="volumemenos">Diminuir o <br> volume</div>
+                </ul>
+            </div>
+        </div>
+
+        <div id="main">
+            <progress value="100" max="100"></progress>
+            <div class="pure-g">
+                <div class="content">
+                    <article id="texto">
+                        <h2>50. MySQL Functions</h2>
+                        <div id="autor">
+                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 04 out. 2023</small>
+                        </div>
+                        <div class="code">
+                            <p>Lista de funções em MySQL.</p>
+                            <p>→ Funções de texto:</p>
+                            <p>
+                                ASCII: Retorna o código ASCII de um caractere específico.<br>
+                                CHAR_LENGTH: Retorna o tamanho de um texto.<br>
+                                CHARACTER_LENGTH: Retorna o tamanho de um texto.<br>
+                                CONCAT: Une dois ou mais textos.<br>
+                                CONCAT_WS: Une dois ou mais textos, porém separa-os por meio de um caractere especial.<br>
+                                FIELD: Retorna a posição de um valor específico em uma lista de valores.<br>
+                                FIND_IN_SET: Retorna a posição de um texto em uma lista de textos.<br>
+                                FORMAT: Permite formatar um número em um formato específico.<br>
+                                INSERT: Insere um texto dentro de outro texto, em uma posição específica.<br>
+                                INSTR: Retorna a posição específica de um texto dentro de outro.<br>
+                                LCASE: Converte um texto para letras minúsculas.<br>
+                                LEFT: Retorna um número de caracteres de um texto (iniciando na esquerda).<br>
+                                LENGTH: Retorna o tamanho de um texto, em bytes.<br>
+                                LOCATE: Retorna a posição da primeira ocorrência de um texto dentro de outro.<br>
+                                LOWER: Converte um texto para letras minúsculas.<br>
+                                LPAD: Adiciona um texto específico, na parte esquerda de outro texto. A função faz isso até atingir um número X de caracteres.<br>
+                                LTRIM: Remove os espaços em branco do início do texto.<br>
+                                MID: Retorna uma parte de um texto.<br>
+                                POSITION: Retorna a posição da primeira ocorrência de um texto dentro de outro.<br>
+                                REPEAT: Repete um texto uma quantidade X de vezes.<br>
+                                REPLACE: Troca um trecho de texto por outro.<br>
+                                REVERSE: Inverte um texto.<br>
+                                RIGHT: Retorna um número de caracteres de um texto (iniciando na direita).<br>
+                                RPAD: Adiciona um texto específico, na parte direita de outro texto. A função faz isso até atingir um número X de caracteres.<br>
+                                RTRIM: Remove os espaços em branco do final do texto.<br>
+                                SPACE: Retorna um texto com um número X de espaços.<br>
+                                STRCMP: Compara dois textos.<br>
+                                SUBSTR: Retorna uma parte de um texto.<br>
+                                SUBSTRING: Retorna uma parte de um texto.<br>
+                                SUBSTRING_INDEX: Retorna uma parte de um texto após um número específico de ocorrências daquele texto.<br>
+                                TRIM: Remove os espaços em branco do início e do fim de um texto.<br>
+                                UCASE: Converte um texto para letras maiúsculas.<br>
+                                UPPER: Converte um texto para letras maiúsculas.<br>
+                            </p>
+                        </div>
+                        <div class="code">
+                            <p>→ Funções numéricas:</p>
+                            <p>
+                                ABS: Retorna o valor absoluto de um número (sem sinal).<br>
+                                ACOS: Retorna o arco cosseno de um número.<br>
+                                ASIN: Retorna o arco seno de um número.<br>
+                                ATAN: Retorna o arco tangente de um número.<br>
+                                ATAN2: Retorna o arco tangente de dois números.<br>
+                                AVG: Retorna a média de um conjunto de números.<br>
+                                CEIL: Retorna o menor valor inteiro que é maior ou igual a um número.<br>
+                                CEILING: Retorna o menor valor inteiro que é maior ou igual a um número.<br>
+                                COS: Retorna o cosseno de um número.<br>
+                                COT: Retorna o cotangente de um número.<br>
+                                COUNT: Retorna a contagem de ocorrências de um valor.<br>
+                                DEGREES: Converte um número de radianos para graus.<br>
+                                DIV: Retorna a parte inteira de uma divisão.<br>
+                                EXP: Retorna o valor elevado a X número.<br>
+                                FLOOR: Retorna o maior valor inteiro que é menor ou igual a um número.<br>
+                                GREATEST: Retorna o maior valor de uma lista.<br>
+                                LEAST: Retorna o menor valor de uma lista.<br>
+                                LN: Retorna o logaritmo natural de um número.<br>
+                                LOG: Retorna o logaritmo natural de um número, em uma base específica.<br>
+                                LOG10: Retorna o logaritmo de base 10.<br>
+                                LOG2: Retorna o logaritmo de base 2.<br>
+                                MAX: Retorna o maior valor em um conjunto de números.<br>
+                                MIN: Retorna o menor valor em um conjunto de números.<br>
+                                MOD: Retorna o resto de uma divisão.<br>
+                                PI: Retorna o valor de PI.<br>
+                                POW: Retorna o valor elevado de um número a X.<br>
+                                POWER: Retorna o valor elevado de um número a X.<br>
+                                RADIANS: Converte um número de graus para radianos.<br>
+                                RAND: Retorna um valor aleatório.<br>
+                                ROUND: Arredonda um número.<br>
+                                SIGN: Retorna o sinal de um número.<br>
+                                SIN: Retorna o seno de um número.<br>
+                                SQRT: Retorna a raiz quadrada de um número.<br>
+                                SUM: Retorna a soma de um conjunto de valores.<br>
+                                TAN: Retorna o valor da tangente de um número.<br>
+                                TRUNCATE: Remove a parte decimal de um número.<br>
+                            </p>
+                        </div>
+                        <div class="code">
+                            <p>→ Funções de data:</p>
+                            <p>
+                                ADDDATE: Adiciona um intervalo de data a outra data.<br>
+                                ADDTIME: Adiciona um intervalo de tempo a outro intervalo de tempo.<br>
+                                CURDATE: Retorna o valor atual da data.<br>
+                                CURRENT_DATE: Retorna o valor atual da data.<br>
+                                CURRENT_TIME: Retorna o valor atual do tempo.<br>
+                                CURRENT_TIMESTAMP: Retorna a data e hora atual.<br>
+                                CURTIME: Retorna o valor atual do tempo.<br>
+                                DATE: Retorna a data de uma expressão "DATETIME".<br>
+                                DATEDIFF: Retorna o número de dias entre duas datas.<br>
+                                DATE_ADD: Adiciona um intervalo de data/hora a uma data.<br>
+                                DATE_FORMAT: Formata uma data.<br>
+                                DATE_SUB: Subtrai um intervalo de data/hora de uma data.<br>
+                                DAY: Retorna o dia de uma data.<br>
+                                DAYNAME: Retorna o nome do dia.<br>
+                                DAYOFMONTH: Retorna o dia de um mês de uma data.<br>
+                                DAYOFWEEK: Retorna o dia da semana de uma data.<br>
+                                DAYOFYEAR: Retorna o dia de um ano específico.<br>
+                                EXTRACT: Extrai uma parte de uma data.<br>
+                                FROM_DAYS: Retorna uma data a partir de um valor numérico.<br>
+                                HOUR: Retorna a hora de um valor de tempo.<br>
+                                LAST_DAY: Extrai o último dia de um mês.<br>
+                                LOCALTIME: Retorna a data/hora atual com base em uma localização.<br>
+                                LOCALTIMESTAMP: Retorna a data/hora atual com base em uma localização.<br>
+                                MAKEDATE: Cria uma data com base em um ano ou um número de dias.<br>
+                                MAKETIME: Cria um horário com base em um valor de hora, minutos ou segundos.<br>
+                                MICROSECOND: Retorna os microssegundos de um valor de tempo/data.<br>
+                                MINUTE: Retorna os minutos de um valor de tempo/data.<br>
+                                MONTH: Retorna um mês de uma data.<br>
+                                MONTHNAME: Retorna o nome de um mês.<br>
+                                NOW: Retorna a data/hora atual.<br>
+                                PERIOD_ADD: Adiciona uma quantidade específica de meses a um período.<br>
+                                PERIOD_DIFF: Retorna a diferença entre dois períodos.<br>
+                                QUARTER: Retorna o trimestre de um valor de data/tempo.<br>
+                                SECOND: Retorna o valor de segundos de um valor de data/tempo.<br>
+                                SEC_TO_TIME: Converte um valor em segundos em um horário.<br>
+                                STR_TO_DATE: Converte um texto em uma data.<br>
+                                SUBDATE: Subtrai um intervalo de datas de um valor de data/tempo.<br>
+                                SUBTIME: Subtrai um intervalo de tempo de um valor de data/tempo.<br>
+                                SYSDATE: Retorna a data/hora atual do sistema.<br>
+                                TIME: Retorna o tempo de uma expressão de data/tempo.<br>
+                                TIME_FORMAT: Converte um valor de tempo em um valor específico.<br>
+                                TIME_TO_SEC: Converte um valor de tempo em segundos.<br>
+                                TIMEDIFF: Retorna a diferença entre duas expressões de data/tempo.<br>
+                                TIMESTAMP: Retorna o date/time com base em uma data.<br>
+                                TO_DAYS: Retorna o número de dias entre uma data e "0000-00-00".<br>
+                                WEEK: Retorna a semana de uma data.<br>
+                                WEEKDAY: Retorna o número de dias da semana de uma data.<br>
+                                WEEKOFYEAR: Retorna o número de semanas de uma data.<br>
+                                YEAR: Retorna o ano de uma data.<br>
+                                YEARWEEK: Retorna o ano e o número de semanas para uma determinada data.<br>
+                            </p>
+                        </div>
+                        <div class="code">
+                            <p>→ Funções avançadas:</p>
+                            <p>
+                                BIN: Retorna a representação binária de um número.<br>
+                                BINARY: Converte um valor em uma sequência binária.<br>
+                                CASE: Retorna um valor definido conforme uma lista de condições.<br>
+                                CAST: Converte um valor definido para um tipo diferente.<br>
+                                COALESCE: Retorna o primeiro valor não NULL de uma lista.<br>
+                                CONNECTION_ID: Retorna o ID de conexão exclusivo para a conexão atual.<br>
+                                CONV: Converte um número de uma base numérica para outra.<br>
+                                CONVERT: Converte um valor para um padrão específico de data ou texto.<br>
+                                CURRENT_USER: Retorna o nome e host do servidor MySQL.<br>
+                                SESSION_USER: Retorna o nome e host do servidor MySQL.<br>
+                                SYSTEM_USER: Retorna o nome e host do servidor MySQL.<br>
+                                USER: Retorna o nome e host do servidor MySQL.<br>
+                                VERSION: Retorna a versão do MySQL que você está utilizando.<br>
+                                DATABASE: Retorna o nome da base de dados atual.<br>
+                                IF: Retorna um valor se a condição for verdadeira e pode retornar outro valor quando a condição é falsa.<br>
+                                IFNULL: Retorna um valor específico se a condição for NULL e pode retornar outro valor quando a condição não é NULL.<br>
+                                ISNULL: Retorna 1 ou 0 dependendo se a expressão é NULL.<br>
+                                LAST_INSERT_ID: Retorna o valor do último ID adicionado através de AUTO_INCREMENT.<br>
+                                NULLIF: Compara duas expressões e retorna NULL se elas forem iguais. Caso contrário, a primeira expressão será retornada.<br>
+                            </p>
+                        </div>
+                    </article>
+                    <div vw class="enabled">
+                        <div vw-access-button class="active"></div>
+                        <div vw-plugin-wrapper>
+                          <div class="vw-plugin-top-wrapper"></div>
+                        </div>
+                      </div>
+                      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+                      <script>
+                        new window.VLibras.Widget('https://vlibras.gov.br/app');
+                      </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../scripts/html2pdf.bundle.min.js"></script>
+    <script src="../scripts/pptxgen.bundle.js"></script>
+    <script src="../scripts/zoom+.js"></script>
+    <script src="../scripts/zoom-.js"></script>
+    <script src="../scripts/print.js"></script>
+    <script src="../scripts/pdf.js"></script>
+    <script src="../scripts/darkmode.js"></script>
+    <script src="../scripts/som.js"></script>
+    <script src="../scripts/pptx.js"></script>
+    <script src="../scripts/ui.js"></script>
+    <script src="../scripts/nav.js"></script>
+</body>
+</html>
