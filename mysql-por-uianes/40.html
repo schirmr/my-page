@@ -63,7 +63,7 @@
                         <div class="code">
                             <p>Exemplo</p>
                             <p><b>Tabela Alunos</b></p>
-                            <table id="table">
+                            <table id="table" class="pure-table">
                                 <tbody>
                                     <tr>
                                         <td>id_aluno</td>
@@ -101,7 +101,7 @@
                             <code><span>FROM</span> Alunos </code><br>
                             <code><em>GROUP BY</em> cidade_aluno;</code><br>
                             <p>Resultado:</p>
-                            <table id="table">
+                            <table id="table" class="pure-table">
                                 <tbody>
                                     <tr>
                                         <td>COUNT(nome_cidade)</td>
@@ -129,7 +129,7 @@
                             <code><em>GROUP BY</em> cidade_aluno</code><br>
                             <code><span>ORDER BY</span> cidade_aluno <span>ASC</span>;</code><br>
                             <p>Resultado:</p>
-                            <table id="table">
+                            <table id="table" class="pure-table">
                                 <tbody>
                                     <tr>
                                         <td>COUNT(nome_cidade)</td>
@@ -154,7 +154,7 @@
                             <p>Utilização do GROUP BY com JOIN:</p>
                             <p>Observe as tabelas.</p>
                             <p><b>Tabela Alunos</b></p>
-                            <table id="table">
+                            <table id="table" class="pure-table">
                                 <tbody>
                                     <tr>
                                         <td>id_aluno</td>
@@ -189,7 +189,7 @@
                                 </tbody>
                             </table>
                             <p><b>Tabela Nota</b></p>
-                            <table id="table">
+                            <table id="table" class="pure-table">
                                 <tbody>
                                     <tr>
                                         <td>nota_id</td>
@@ -230,7 +230,7 @@
                             <code><span>ON</span> <span id="alerta">alunos</span>.id_aluno = <span id="alerta">alunos</span>.id_nota</code><br>
                             <code><em>GROUP BY</em> <span id="alerta">alunos</span>.nome_aluno;</code><br>
                             <p>Resultado:</p>
-                            <table id="table">
+                            <table id="table" class="pure-table">
                                 <tbody>
                                     <tr>
                                         <td>nome_aluno</td>
