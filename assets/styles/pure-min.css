@@ -486,6 +486,38 @@ a.pure-button-selected {
     color: #fff
 }
 
+.pure-button-success,
+.pure-button-selected,
+a.pure-button-success,
+a.pure-button-selected {
+    background: rgb(28, 184, 65);
+    color: #fff
+}
+
+.pure-button-error,
+.pure-button-selected,
+a.pure-button-error,
+a.pure-button-selected {
+    background: rgb(202, 60, 60);
+    color: #fff
+}
+
+.pure-button-warning,
+.pure-button-selected,
+a.pure-button-warning,
+a.pure-button-selected {
+    background: rgb(223, 117, 20);
+    color: #fff
+}
+
+.pure-button-secondary,
+.pure-button-selected,
+a.pure-button-secondary,
+a.pure-button-selected {
+    background: rgb(66, 184, 221);
+    color: #fff
+}
+
 .pure-button-group .pure-button {
     margin: 0;
     border-radius: 0;

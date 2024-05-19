@@ -37,3 +37,4 @@ Funcionalidades atuais:
 - [ ] Para que o slide receba cor, é necessário adidcionar um css inline, talvez dê para fazer algo desse tipo no pptx.js adicionando no elemento.
 - [ ] Refazer o menu, pois no Safari é necessário "descer a página" para ele aparecer no celular.
 - [ ] Quando copiar algo do texto, ir formatado com referência ABNT.
+- [ ] Quando você está numa página de exercícios, ao clicar para voltar (script nav.js), é necessário voltar para o mesmo número que se está agora. (Exercício: ex2.html, ao voltar, você irá para 1.html, e não para 2.html).
