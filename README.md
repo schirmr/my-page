@@ -1,4 +1,4 @@
-# ELECBRA - ELECTRIC BRAIN
+# ELECBRA - ELECTRONIC BRAIN
 
 Destinado a publicação de conteúdos educacionais em Computação.
 Acessibilidade é um diferencial.
@@ -38,3 +38,4 @@ Funcionalidades atuais:
 - [ ] Refazer o menu, pois no Safari é necessário "descer a página" para ele aparecer no celular.
 - [ ] Quando copiar algo do texto, ir formatado com referência ABNT.
 - [ ] Quando você está numa página de exercícios, ao clicar para voltar (script nav.js), é necessário voltar para o mesmo número que se está agora. (Exercício: ex2.html, ao voltar, você irá para 1.html, e não para 2.html).
+- [ ] Adicionar meta description e meta author nas páginas.
