@@ -1,185 +1,31 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Elecbra é um portal para aprender Ciência da Computação, aberto, livre e gratuito. Criado pelo professor Uianes Luiz Rockenbach Biondo. O objetivo é criar um ambiente com acessibilidade e disponível para todo tipo de tecnologia da forma mais leve.">
     <title>ELECBRA</title>
-    <link rel="icon" type="image/png" href="../../assets/icons/icon.png">
-    <link rel="stylesheet" href="../../assets/styles/style.css">
+    <link rel="icon" type="image/png" href="../../assets/images/img.svg">
     <link rel="stylesheet" href="../../assets/styles/pure-min.css">
-    <link rel="stylesheet" href="../../assets/styles/sidemenu.css">
+    <link rel="stylesheet" href="../../assets/styles/base-min.css">
+    <link rel="stylesheet" href="../../assets/styles/grids-min.css">
+    <link rel="stylesheet" href="../../assets/styles/grids-responsive-min.css">
+    <link rel="stylesheet" href="../../assets/styles/sidebartemplate.css">
+    <link rel="stylesheet" href="../../assets/styles/style.css">
 </head>
+
 <body>
-    <div id="layout">
-        <div id="menu">
-            <a href="#menu" id="menuLink" class="menu-link">
-                <span></span>
-            </a>
-            <div class="pure-menu">
-                <a class="pure-menu-heading" href="index.html">Início</a>
-        
-                <ul class="pure-menu-list" style="text-align: center;">
-                    <div class="pure-menu-item menu-item-divided" style="padding: 10px; color: white;">Menu:</div>
-        
-                    <div id="zoom+" class="pure-menu-link">+</div>
-                    <div id="zoom-" class="pure-menu-link">-</div>
-                    <div class="pure-menu-link"><a href="" id="ant">&lt;</a></div>
-                    <div class="pure-menu-link"><a href="" id="prox">&gt;</a></div>
-                    <hr>
-                    <div class="pure-menu-link" id="imprimir">Imprimir</div>
-                    <div class="pure-menu-link" id="pdf">PDF</div>
-                    <div class="pure-menu-link" id="pptx">Gerar <br> Apresentação</div>
-                    <div class="pure-menu-link" id="darkmode">Alto<br>Contraste</div>
-                    <hr>
-                    <div class="pure-menu-link" id="ouvir">Ouvir o texto</div>
-                    <div class="pure-menu-link" id="pausar">Pausar</div>
-                    <div class="pure-menu-link" id="retomar">Retomar</div>
-                    <div class="pure-menu-link" id="velocidademais">Aumentar a <br> velocidade</div>
-                    <div class="pure-menu-link" id="velocidademenos">Diminuir a <br> velocidade</div>
-                    <div class="pure-menu-link" id="volumemais">Aumentar o <br> volume</div>
-                    <div class="pure-menu-link" id="volumemenos">Diminuir o <br> volume</div>
-                </ul>
-            </div>
+    <div id="layout" class="pure-g">
+        <a class="pure-button" href="../../index.html" style="margin: 5px;"> &lt; Voltar</a>
+        <div class="pure-u-1" style="padding-left: 30px;">
+            <h1 style="text-align: center;">Engenharia de Software - Conceitos e Práticas - Raul Sidnei Wazlawick</h1>
+            <h2>Sumário</h2>
+            <br>
+            <a href="1.html">Introdução</a>
         </div>
-        <div id="main">
-            <progress value="5" max="100"></progress>
-            <div class="pure-g">
-                <div class="content">
-                    <article id="texto">
-                        <h2>1. Capítulo 01 - Introdução</h2>
-                        <div id="autor">
-                            <small>Escrito por Uianes Luiz Rockenbach Biondo. <br> Última atualização em 15 dez. 2024</small>
-                        </div>
-                        <div class="code">
-                            <p>
-                                <u>A crise dos desenvolvedores de Software</u>
-                            </p>
-                            <p>Anos 1970:</p>
-                            <ol>
-                                <li>Desenvolvedores utilizavam processos não adequados.</li>
-                                <li>Os processos adequados não eram empregados por falta de tempo e recursos.</li>
-                                <li>Dijkstra (1971) foi o primeiro a utilizar o termo "crise do software".</li>
-                                <li>Os problemas elencados por Dijkstra foram:</li>
-                                <ol>
-                                    <li>Cronograma;</li>
-                                    <li>Orçamento estourado;</li>
-                                    <li>Baixa qualidade, ineficiência e não atendimento de todos os requisitos no produto final;</li>
-                                    <li>Produtos não gerenciáveis, como difícil manutenção e evolução;</li>
-                                    <li>Produtos nunca entregues;</li>
-                                </ol>
-                                <li>Wazlawick aponta que a crise do software continuará enquanto forem utilizados processos artesanais e não forem capitalizados os erros e acertos.</li>
-                            </ol>
-                        </div>
-                        <div class="code">
-                            <p><u>Os eternos mitos:</u></p>
-                            <p>São identificados inicialmente por Pressman (2005). São agrupados em mitos: </p>
-                            <ol>
-                                <li>Administrativos;</li>
-                                <li>Do cliente;</li>
-                                <li>Do profissional;</li>
-                            </ol>
-                            <hr>
-                            <ol>
-                                <li>Mitos Administrativos</li>
-                                <ol>
-                                    <li>A existência de um manual de procedimentos e padrões é suficiente para a equipe produzir com qualidade;</li>
-                                    <li>A empresa deve produzir com qualidade, pois tem ferramentas e computadores de última geração;</li>
-                                    <li>Se o projeto estiver atrasado, sempre é possível adicionar mais programadores para cumprir o cronograma (Lei de Brooks);</li>
-                                    <li>Um bom gerente pode gerenciar qualquer projeto;</li>
-                                </ol>
-                                <li>Mitos do Cliente:</li>
-                                <ol>
-                                    <li>Uma declaração de objetivos é suficiente para iniciar a fase de programação;</li>
-                                    <li>Os requisitos mudam com frequência, mas sempre é possível acomodá-los, pois o software é flexível;</li>
-                                    <li>Eu sei do que preciso;</li>
-                                </ol>
-                                <li>Mitos do profissional</li>
-                                <ol>
-                                    <li>Assim que o programa for colocado em operação, nosso trabalho terminou;</li>
-                                    <li>Enquanto o programa não estiver funcionando, não será possível avaliar sua qualidade;</li>
-                                    <li>Se eu esquecer alguma coisa, posso arrumar depois;</li>
-                                    <li>A única entrega importante em um projeto é o software funcionando;</li>
-                                </ol>
-                            </ol>
-                            <hr>
-                            <p>Leverson (1995) apresenta outros mitos, acerca da confiabilidade de software:</p>
-                            <ol>
-                                <li>O teste do software ou sua verificação formal pode remover todos os erros;</li>
-                                <li>Aumentar a confiabilidade do software aumenta a segurança;</li>
-                                <li>O reúso de software aumenta a segurança;</li>
-                            </ol>
-                        </div>
-                        <hr>
-                        <div class="code">
-                            <p><u>(In)Definição da Engenharia de Software</u></p>
-                            <p><b>Engenharia de Software:</b> "O processo de estudar, criar e otimizar os processos de trabalho para os desenvolvedores de software" (WAZLAWICK, 2019, p. 4)</p>
-                        </div>
-                        <hr>
-                        <div class="code">
-                            <p><u>O Engenheiro de Software</u></p>
-                            <p>Conceitos como "desenvolvedor" e "engenheiro de software" geram confusão.</p>
-                            <p>Desenvolvedor: Profissional que executa o projeto.</p>
-                            <p>Engenheiro de Software: Profissional que cria condições para o trabalho do desenvolvedor. Escolhe e especifica o processo de planejamento para todos os projetos.</p>
-                            <p>Outros cargos ou funções:</p>
-                            <p>Gerente de projeto: Cuida de um projeto específico (prazos, orçamento, escopo e objetivos);</p>
-                            <p>Analista: Desenvolvedor que realiza o levantamento de requisitos e modelagem;</p>
-                            <p>Designer: Define as tecnologias utilizadas para implementação dos modelos/requisitos definidos pelo Analista;</p>
-                            <p>Programador: Cria a implementação física do projeto.</p>
-                        </div>
-                        <hr>
-                        <div class="code">
-                            <p><u>Evolução da Engenharia de Software</u></p>
-                            <ol>
-                                <li>Computadores entre 1930 e 1940 utilizavam programação física, sem software embutido, a programação era realizada diretamente no Hardware.</li>
-                                <li>A necessidade de criação do software fez surgir a engenharia de software.</li>
-                                <li>O conceito inicial era ligado a ideia de campo de conhecimento que produz o software.</li>
-                                <li>A primeira conferência de Engenharia de Software foi a Conferência de Engenharia de Software da OTAN, em Garmish (Alemanha) - 1968, mas o termo "Engenharia de Software" é utilizado desde 1950.</li>
-                                <li>O período entre 1960 e 1980 é compreendido como o "período da crise do software".</li>
-                                <li>Há um esforço contínuo para a solução da crise do software, inclusive nos dias de hoje, como a criação de: Ferramentas CASE (Computer Aided Software Engineering), especificação formal, prototipação, processos, componentes, testes de automatização, etc.</li>
-                                <li>Anos 90 consolidaram o WEB e a mudança de paradigmas para a orientação a objetos. Há uma maior preocupação com questões de segurança.</li>
-                                <li>Anos 2000: Consolidação dos métodos ágeis.</li>
-                                <li>Hoje: Busca de padronização (SWEBOK, ISO/IEC TR 19759).</li>
-                            </ol>
-                        </div>
-                        <hr>
-                        <div class="code">
-                            <p><u>Tipos de software do ponto de vista da engenharia</u></p>
-                            <p><b>Software básico: </b> compiladores, drivers, componentes do sistema operacional;</p>
-                            <p><b>Software de tempo real: </b> monitoram, analisam e controlam eventos do mundo real;</p>
-                            <p><b>Software comercial: </b> controles de estoque, vendas, etc. Geralmente aplicados em empresas. Chamados de Sistemas de Informações.</p>
-                            <p><b>Software científico e de engenharia: </b> voltados para o processamento de grande volume de dados.</p>
-                            <p><b>Software embutido ou embarcado: </b> presente em smartphones, eletrodomésticos, veículos, etc. Trabalham em um contexto de recursos computacionais escassos.</p>
-                            <p><b>Software pessoal: </b> softwares do dia a dia, como processadores de texto, planilhas (software de escritório). Genericamente são chamados de aplicativos.</p>
-                            <p><b>Jogos: </b> possuem especifidades que o distinguem do software pessoal.</p>
-                            <p><b>Inteligência Artificial (IA): </b> sistemas independentes, com processos de redes neurais ou formas de aprendizado.</p>
-                        </div>
-                    </article>
-                    <hr>
-                <div vw class="enabled">
-                    <div vw-access-button class="active"></div>
-                    <div vw-plugin-wrapper>
-                        <div class="vw-plugin-top-wrapper"></div>
-                    </div>
-                </div>
-        <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-        <script>
-            new window.VLibras.Widget('https://vlibras.gov.br/app');
-        </script>
     </div>
-</div>
-</div>
-</div>
-    <script src="../../scripts/html2pdf.bundle.min.js"></script>
-    <script src="../../scripts/pptxgen.bundle.js"></script>
-    <script src="../../scripts/zoom+.js"></script>
-    <script src="../../scripts/zoom-.js"></script>
-    <script src="../../scripts/print.js"></script>
-    <script src="../../scripts/pdf.js"></script>
-    <script src="../../scripts/darkmode.js"></script>
-    <script src="../../scripts/som.js"></script>
-    <script src="../../scripts/pptx.js"></script>
-    <script src="../../scripts/ui.js"></script>
-    <script src="../../scripts/nav.js"></script>
 </body>
 
 </html>
