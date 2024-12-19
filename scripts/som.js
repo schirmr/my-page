@@ -25,7 +25,7 @@ document.getElementById('velocidademais').addEventListener('click', function () 
 
 document.getElementById('velocidademenos').addEventListener('click', function () {
     window.speechSynthesis.cancel()
-    utterance.rate -= Math.max(0.1, utterance.rate - 0.1) // Garantir que não fique menor que 0.1
+    utterance.rate = Math.max(0.1, utterance.rate - 0.1) // Garantir que não fique menor que 0.1
     window.speechSynthesis.speak(utterance)
 })
 
