@@ -19,24 +19,24 @@ document.getElementById('retomar').addEventListener('click', function () {
 
 document.getElementById('velocidademais').addEventListener('click', function () {
     window.speechSynthesis.cancel()
-    utterance.rate += 0.5
+    utterance.rate += 0.1
     window.speechSynthesis.speak(utterance)
 })
 
 document.getElementById('velocidademenos').addEventListener('click', function () {
     window.speechSynthesis.cancel()
-    utterance.rate -= 0.5
+    utterance.rate -= Math.max(0.1, utterance.rate - 0.1) // Garantir que não fique menor que 0.1
     window.speechSynthesis.speak(utterance)
 })
 
 document.getElementById('volumemais').addEventListener('click', function () {
     window.speechSynthesis.cancel()
-    utterance.volume += 0.5
+    utterance.volume += Math.min(1, utterance.volume + 0.1) // Garantir que não ultrapasse 1
     window.speechSynthesis.speak(utterance)
 })
 
 document.getElementById('volumemenos').addEventListener('click', function () {
     window.speechSynthesis.cancel()
-    utterance.volume -= 0.5
+    utterance.volume = Math.max(0.1, utterance.volume - 0.1) // Garantir que não fique menor que 0 (se quiser que exista volume 0, só mudar o 0.1 para 0)
     window.speechSynthesis.speak(utterance)
 })
